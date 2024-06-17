@@ -1,18 +1,291 @@
-.main{
+.main {
   width: 100%;
-  height: 100vh;
-  background-color: whitesmoke;
+  height: 90vh;
+  background-color: black;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: row;
+  gap: 26px;
+  font-family: var(--text-font-family);
+  font-optical-sizing: var(--text-font-optical-sizing);
+  font-weight: var(--text-font-weight);
+  font-style: var(--text-font-style);
+  overflow: hidden;
 }
-.leftPanel{
-  width: 70%;
-  height: 100vh;
-  background-color: black;
+
+.ui img {
+  filter: grayscale(100%);
 }
-.rightPanel{
- width: 30%;
-  height: 100vh;
+.ui img:hover {
+  filter: grayscale(0);
+  filter: drop-shadow(2px 2px 5px whitesmoke);
+}
+
+.leftPanel  {
+  width: 55%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: var(--color-000);
+  gap: 26px;
+}
+
+.belance-background {
+  width: 95%;
+  height: 400px;
+  background: url(img/background-3.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 20px 20px 100px 20px;
+  text-align: center;
+  overflow: hidden;
+  animation: bottom 1.5s ease-in-out forwards;
+}
+
+.belance {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: row;
+  gap: 10px;
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  border-radius: 20px 20px 95px 20px;
+}
+
+.belance-container {
+  width: 45%;
+  height: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  animation: bottom 1.5s ease-in-out forwards;
+}
+
+.belance-title {
+  width: 100%;
+  font-size: 35px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  color: whitesmoke;
+  gap: 8px;
+}
+
+.belance-logo {
+  width: 30px;
+  height: 30px;
+  background: url(img/logo.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.information {
+  width: 100%;
+  height: 100%;
+  padding-bottom: 10px;
+  background-color: rgba(0, 0, 0, 0.445);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 15px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.text {
+  font-size: 25px;
+  color: whitesmoke;
+}
+
+.services {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  font-size: 25px;
+  color: whitesmoke;
+  gap: 6px;
+}
+
+.skills {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  font-size: 15px;
+  color: var(--color-000);
+  gap: 8px;
+}
+
+.ui {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 1px;
+  cursor: pointer;
+}
+
+.language {
+  color: whitesmoke;
+}
+
+.description-container {
+  width: 95%;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 26px;
+  animation: bottom 1.5s ease-in-out forwards;
+}
+
+.description-background-left {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  background: url(img/background-2.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.description-background-right {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  background: url(img/background-1.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 20px 100px 20px 20px;
+  overflow: hidden;
+}
+
+.description {
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px); /* For Safari (Aple)*/
+  border-radius: 20px;
+}
+
+.description-background-right .description {
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px); /* For Safari (Aple)*/
+  border-radius: 20px 100px 20px 20px;
+}
+
+/*RightPanel*/
+
+.rightPanel {
+  width: 30%;
+  height: auto;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 26px;
+}
+
+.developers-background {
+  width: 100%;
+  height: 400px;
+  background: url(img/background-4.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 20px 20px 20px 100px;
+  overflow: hidden;
+  animation: bottom 1.5s ease-in-out forwards;
+
+}
+
+.developers {  
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px); /* For Safari (Aple)*/
+  border-radius: 20px 20px 20px 100px;
+}
+
+.works-scroll-background {
+  width: 100%;
+  height: 300px;
+  border-radius: 100px 20px 20px 20px;
+  overflow: hidden;
+}
+
+.back-blur {
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(25px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.works-scroll {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  animation: scroll 5s ease-in-out infinite;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes scroll {
+  0% { 
+    transform: translateX(30%);
+    opacity: 0;
+  }
+  20%{
+    transform: translateX(0);
+  }
+  40%{
+    opacity: 1; 
+  }
+  90%{
+    transform: translateX(0);
+    opacity: 1;
+  }
+  95%{
+    opacity: 0;
+  }
+  100% { 
+    transform: translateX(30%);
+    opacity: 0; 
+  }
+  }
+@keyframes bottom {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
