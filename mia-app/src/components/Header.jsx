@@ -9,20 +9,17 @@ const Header = () => {
     <div className="header">
       <div className="container">
         <div className="logo-title">
-          <Link to={"/"}>
+          <Link to={"/home"}>
             <div className="logo"></div>
           </Link>
-          <Link to={"/"}>
+          <Link to={"/home"}>
             <div className="title">Belance</div>
           </Link>
         </div>
         <div className="navigation">
-          <div className="left-container">About</div>
-          <div className="left-container">Contact Us</div>
-          <div className="left-container"> Works <p>
-              <FontAwesomeIcon icon={faArrowRight} />
-            </p>
-          </div>
+          <div className="left-container"> About </div>
+          <div className="left-container"> Contact Us </div>
+          <div className="left-container"> Works </div>
           <div className="left-container"> Social <p>
               <FontAwesomeIcon icon={faArrowRight} />
             </p>
@@ -34,7 +31,7 @@ const Header = () => {
         </div>
       </div>
       <div className="right-container">
-        <div className="start">Get Started</div>
+        <span> Sign up </span>
       </div>
     </div>
   );

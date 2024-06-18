@@ -15,11 +15,13 @@
 }
 
 .ui img {
-  filter: grayscale(100%);
+  filter: grayscale(50%);
+  cursor: auto;
 }
-.ui img:hover {
-  filter: grayscale(0);
-  filter: drop-shadow(2px 2px 5px whitesmoke);
+
+.abaut-container {
+  width: 100%;
+  height: 100%;
 }
 
 .leftPanel  {
@@ -43,7 +45,7 @@
   border-radius: 20px 20px 100px 20px;
   text-align: center;
   overflow: hidden;
-  animation: bottom 1.5s ease-in-out forwards;
+  animation: bottom 2s ease-in-out forwards;
 }
 
 .belance {
@@ -56,18 +58,24 @@
   flex-direction: row;
   gap: 10px;
   backdrop-filter: blur(25px);
-  -webkit-backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px); /* For Safari (Aple)*/
   border-radius: 20px 20px 95px 20px;
 }
 
 .belance-container {
   width: 45%;
-  height: 90%;
+  height: 95%;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   flex-direction: column;
-  animation: bottom 1.5s ease-in-out forwards;
+  animation: bottom 2s ease-in-out forwards;
+}
+
+.belance .belance-container:nth-child(2) {
+  overflow: hidden;
+  border-radius: 20px 20px 85px 20px;
+
 }
 
 .belance-title {
@@ -77,7 +85,7 @@
   display: flex;
   align-items: center;
   flex-direction: row;
-  color: whitesmoke;
+  color: var(--color-001);
   gap: 8px;
 }
 
@@ -93,7 +101,6 @@
 .information {
   width: 100%;
   height: 100%;
-  padding-bottom: 10px;
   background-color: rgba(0, 0, 0, 0.445);
   border-radius: 16px;
   display: flex;
@@ -108,7 +115,7 @@
 
 .text {
   font-size: 25px;
-  color: whitesmoke;
+  color: var(--color-001);
 }
 
 .services {
@@ -116,7 +123,7 @@
   flex-direction: column;
   width: 90%;
   font-size: 25px;
-  color: whitesmoke;
+  color: var(--color-001);
   gap: 6px;
 }
 
@@ -141,7 +148,40 @@
 }
 
 .language {
-  color: whitesmoke;
+  color: var(--color-001);
+}
+
+.abaut-title {
+  width: 100%;
+  color: var(--color-001);
+  font-size: 35px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 8px;
+}
+
+.abaut-logo {
+  width: 30px;
+  height: 30px;
+  background: url(img/abaut-logo.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.abaut {
+  width: 90%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.more {
+  color: var(--color-001);
 }
 
 .description-container {
@@ -152,7 +192,7 @@
   justify-content: center;
   flex-direction: row;
   gap: 26px;
-  animation: bottom 1.5s ease-in-out forwards;
+  animation: bottom 2s ease-in-out forwards;
 }
 
 .description-background-left {
@@ -217,7 +257,7 @@
   background-repeat: no-repeat;
   border-radius: 20px 20px 20px 100px;
   overflow: hidden;
-  animation: bottom 1.5s ease-in-out forwards;
+  animation: bottom 2s ease-in-out forwards;
 
 }
 
@@ -227,6 +267,93 @@
   backdrop-filter: blur(25px);
   -webkit-backdrop-filter: blur(25px); /* For Safari (Aple)*/
   border-radius: 20px 20px 20px 100px;
+  color: var(--color-001);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.developers-title {
+  font-size: 35px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 8px;
+}
+
+.developers-logo {
+  width: 30px;
+  height: 30px;
+  background: url(img/dev-logo.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.developers-container {
+  width: 95%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.developer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  background-color: rgba(0, 0, 0, 0.445);
+  border-radius: 20px;
+  padding: 5px 10px 5px 10px;
+  width: 90%;
+  height: 15%;
+}
+
+.avatar {
+  width: 45px;
+  height: 45px;
+  font-size: 30px;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.level {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.level-1 {
+  background-color: #fc4a4a;
+  color: var(--color-001);
+}
+
+.level-2 {
+  background-color: #cc7777;
+  color: black;
+}
+
+.level-3 {
+  background-color: #ffff66;
+  color: black;
+}
+
+.level-4 {
+  background-color: #78f782; 
+  color: black;
+}
+
+.level-5 {
+  background-color: #30ee30; 
+  color: black;
 }
 
 .works-scroll-background {
@@ -235,16 +362,6 @@
   border-radius: 100px 20px 20px 20px;
   overflow: hidden;
 }
-
-.back-blur {
-  width: 100%;
-  height: 100%;
-  backdrop-filter: blur(25px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .works-scroll {
   width: 100%;
   height: 100%;
@@ -255,37 +372,4 @@
 .img {
   width: 100%;
   height: 100%;
-}
-
-@keyframes scroll {
-  0% { 
-    transform: translateX(30%);
-    opacity: 0;
-  }
-  20%{
-    transform: translateX(0);
-  }
-  40%{
-    opacity: 1; 
-  }
-  90%{
-    transform: translateX(0);
-    opacity: 1;
-  }
-  95%{
-    opacity: 0;
-  }
-  100% { 
-    transform: translateX(30%);
-    opacity: 0; 
-  }
-  }
-@keyframes bottom {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
 }
