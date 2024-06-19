@@ -23,6 +23,11 @@
   align-items: center;
   justify-content: space-evenly;
   flex-direction: row;
+  transition: 0.5s ease-in-out;
+}
+
+.no-justify-space-evenly {
+  justify-content: start;
 }
 
 .logo-title {
@@ -49,6 +54,7 @@
   color: whitesmoke;
   padding: 2px 10px 2px 10px;
   border: 1px whitesmoke solid;
+  border-radius: 10px;
   transition: 0.5s ease-in-out;
 }
 .title:hover {
@@ -110,6 +116,7 @@
   font-weight: 500;
   color: var(--color-001);
   border: 2px whitesmoke solid;
+  border-radius: 10px;
   padding: 4px 10px 4px 10px;
   transition: 0.5s ease-in-out;
 }

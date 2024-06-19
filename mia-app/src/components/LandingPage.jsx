@@ -22,7 +22,7 @@ const Landing = () => {
 
   return (
     <>
-      <Header />
+      <Header hideNavigation={true} noJustify={true} />
       <div className={`main ${fadeOut ? 'fade-out' : ''}`}>
         <div className="landing-video">
           <video src={video} autoPlay loop muted playsInline></video>
@@ -30,8 +30,8 @@ const Landing = () => {
           <div className="video-overlay-top"></div>
         </div>
         <div className="landing-start">
-          <div className="text">Belance</div>
-          <div className="landing-text">{landingText[0]}</div>
+          <div className="text"> Belance </div>
+          <div className="landing-text"> {landingText[0]} </div>
           <div className="start" onClick={handleStartClick}> Get Started </div>
         </div>
       </div>

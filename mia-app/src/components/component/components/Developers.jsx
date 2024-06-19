@@ -8,7 +8,9 @@ const Developers = () => {
   
   const developers = ['Developers'];
   const developersData = [
-    { name: 'Oleh Bratok', experience: 'Ex: 1 years', level: '3', portfolioLink: 'https://soulswap-portfolio.netlify.app/' },
+    { name: 'Davide Pelucchini', experience: 'Ex: 1 mount', level: '4', portfolioLink: '' },
+    { name: 'Leandro Fonti', experience: 'Ex: 1 mount', level: '3', portfolioLink: '' },
+    { name: 'Oleh Bratok', experience: 'Ex: 1 years', level: '5', portfolioLink: 'https://soulswap-portfolio.netlify.app/' },
     { name: 'Mark Herasymchuk', experience: 'Ex: 3 years', level: '5', portfolioLink: 'https://mireg-v.github.io/Web-Resume/' },
   ];
 
@@ -17,9 +19,9 @@ const Developers = () => {
   return (
     <div className="developers-background">
       <div className="developers">
-        <div className="developers-title">
+        <div className="home-title">
           {developers[0]}
-          <div className="developers-logo"></div>
+          <div className="home-logo"></div>
         </div>
         <div className="developers-container">
           {developersData.map((developer, index) => (

@@ -54,6 +54,7 @@
 .start {
   padding: 5px 10px 5px 10px;
   border: 1px whitesmoke solid;
+  border-radius: 10px;
   font-size: 25px;
   color: var(--color-001);
   cursor: pointer;

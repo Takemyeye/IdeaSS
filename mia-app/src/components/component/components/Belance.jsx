@@ -1,5 +1,5 @@
 import React from "react";
-import '../../styles/Home.css';
+import { Link } from "react-router-dom";
 
 const Belance = () => {
 
@@ -9,11 +9,12 @@ const Belance = () => {
     'About',
     'At Belance, we believe in the power of innovation. Our team of professionals specializes in creating high-quality web applications using the most advanced technologies.',
     'Our Services',
-    'React Development',
     'Angular Development',
-    'Next.js Applications',
-    'Node.js Development',
+    'React Development',
     'PHP Development',
+    'Node.js Development',
+    'Next.js Applications',
+    
     'Our Company',
     'Belance is a forward-thinking web development company dedicated to bringing your digital visions to life. Our mission is to deliver state-of-the-art web applications that not only meet but exceed your expectations. We combine creativity, technology, and a deep understanding of modern web development to provide solutions that are both innovative and reliable.',
     'Why Belance?',
@@ -34,9 +35,9 @@ const Belance = () => {
     <div className="belance-background">
         <div className="belance">
           <div className="belance-container">
-            <div className="belance-title">
+            <div className="home-title">
               {text[0]} 
-              <div className="belance-logo"></div>
+              <div className="home-logo"></div>
             </div>
             <div className="information">
               <div className="abaut">
@@ -67,9 +68,9 @@ const Belance = () => {
             </div>
           </div>
           <div className="belance-container">
-            <div className="abaut-title">
+            <div className="home-title">
               {text[2]}
-              <div className="abaut-logo"></div>
+              <div className="home-logo"></div>
             </div>
             <div className="information">
               <div className="abaut">
@@ -77,7 +78,9 @@ const Belance = () => {
                 <span>{text[11]}</span>
                 <div className="text">{text[12]}</div>
                 <span>{text[13]}</span>
-                <div className="more">More...</div>
+                <Link to={'/abaut'}>
+                   <div className="more">More...</div>
+                </Link>
               </div>
             </div>
           </div>

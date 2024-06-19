@@ -1,7 +1,11 @@
 import React, { useState, useEffect, useMemo } from "react";
+import { Link } from "react-router-dom";
 import '../../styles/Home.css';
 
 const RightPanelBottom = () => {
+
+  const text = ['Worked with']
+
   const images = useMemo(
     () => [
       'img/SS-Portfolio.png',
@@ -43,6 +47,15 @@ const RightPanelBottom = () => {
               height: "100%",
             }}
           />
+        </div>
+        <div className="img-overlay">
+          <div className="home-title"> 
+            {text[0]}
+            <div className="home-logo"></div>
+          </div>
+          <Link to={'/works'}>
+            <div className="more"> See more... </div>
+          </Link>
         </div>
       </div>
     </div>
