@@ -1,6 +1,6 @@
 .main {
   width: 100%;
-  height: 90vh;
+  min-height: 90vh;
   background-color: black;
   display: flex;
   align-items: center;
@@ -26,7 +26,7 @@
 
 .leftPanel  {
   width: 55%;
-  height: auto;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -36,7 +36,7 @@
 }
 
 .belance-background {
-  width: 95%;
+  width: 100%;
   height: 400px;
   background: url(img/background-3.jpg);
   background-position: center;
@@ -44,7 +44,6 @@
   background-repeat: no-repeat;
   border-radius: 20px 20px 80px 20px;
   text-align: center;
-  overflow: hidden;
   z-index: 1;
   animation: bottom 2s ease-in-out forwards;
 }
@@ -58,10 +57,8 @@
   justify-content: space-evenly;
   flex-direction: row;
   gap: 10px;
-  background-color: rgba(0, 0, 0, 0.445);
-  backdrop-filter: blur(25px);
-  -webkit-backdrop-filter: blur(25px); /* For Safari (Aple)*/
-  border-radius: 20px 20px 80px 20px;
+  background-color: rgba(0, 0, 0, 0.87);
+  border-radius: 20px 20px 70px 20px;
 }
 
 .home-title {
@@ -90,6 +87,10 @@
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
+}
+
+.belance-container {
+  backdrop-filter: blur(10px);
 }
 
 .developers .home-title .home-logo {
@@ -130,13 +131,13 @@
   justify-content: center;
   flex-direction: column;
   gap: 8px;
-  font-size: 15px;
+  font-size: 13px;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
 .text {
-  font-size: 25px;
+  font-size: 20px;
   color: var(--color-001);
 }
 
@@ -186,12 +187,13 @@
   height: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   flex-direction: column;
   gap: 8px;
 }
 
 .more {
+  font-size: 20px;
   color: var(--color-001);
   padding: 5px 10px 5px 10px;
   border: 1px var(--color-001) solid;
@@ -200,7 +202,8 @@
 }
 
 .description-container {
-  width: 95%;
+  position: relative;
+  width: 100%;
   height: 300px;
   display: flex;
   align-items: center;
@@ -214,23 +217,23 @@
   position: relative;
   width: 100%;
   height: 100%;
-  background: url(img/background-2.jpg);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  z-index: 1;
-  border-radius: 20px 80px 20px 20px;
+  border-radius: 20px 70px 20px 20px;
   overflow: hidden;
 }
 
-.description {
+.description-background video {
   width: 100%;
   height: 100%;
-  backdrop-filter: blur(25px);
-  background-color: rgba(0, 0, 0, 0.445);
-  -webkit-backdrop-filter: blur(25px); /* For Safari (Aple)*/
-  border-radius: 20px;
-  border-radius: 20px 80px 20px 20px;
+  object-fit: cover;
+}
+
+.background {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.719);
 }
 
 /*RightPanel*/
@@ -255,18 +258,14 @@
   background-repeat: no-repeat;
   border-radius: 20px 20px 20px 80px;
   z-index: 1;
-  overflow: hidden;
   animation: bottom 2s ease-in-out forwards;
-
 }
 
 .developers {  
   width: 100%;
   height: 100%;
-  backdrop-filter: blur(25px);
-  -webkit-backdrop-filter: blur(25px); /* For Safari (Aple)*/
-  background-color: rgba(0, 0, 0, 0.445);
-  border-radius: 20px 20px 20px 80px;
+  background-color: rgba(0, 0, 0, 0.87);
+  border-radius: 20px 20px 20px 70px;
   color: var(--color-001);
   display: flex;
   align-items: center;
@@ -340,6 +339,7 @@
 }
 
 .works-scroll-background {
+  position: relative;
   width: 100%;
   height: 300px;
   border-radius: 80px 20px 20px 20px;
@@ -373,6 +373,156 @@
   flex-direction: column;
   background-color: rgba(0, 0, 0, 0.445);
   backdrop-filter: blur(4px);
-  border-radius: 80px 20px 20px 20px;
   animation: bottom 2s ease-in-out forwards;
+}
+
+@media all and ( max-width: 1440px ) {
+
+  .main {
+    flex-direction: column;
+  }
+
+  .leftPanel {
+    width: 100%;
+  }
+
+  .belance-background{
+    border-radius: 20px;
+    width: 70%;
+    height: 500px;
+  }
+
+  .belance {
+    border-radius: 0;
+  }
+
+  .belance .belance-container:nth-child(2) {
+    border-radius: 20px;
+  }
+
+  .rightPanel {
+    width: 90%;
+    height: 850px;
+    justify-content: space-evenly;
+  }
+
+   .developers-background {
+    border-radius: 20px;
+  }
+
+  .developers {
+    border-radius: 0;
+  }
+
+  .works-scroll-background {
+    border-radius: 20px;
+  }
+
+  .works-scroll {
+    border-radius: 0;
+  }
+    
+  .img-overlay {
+    border-radius: 0; 
+    min-width: 101%;
+   }
+   
+}
+
+@media all and ( max-width: 768px ) {
+  
+  .main {
+    flex-direction: column;
+  }
+
+  .leftPanel {
+    width: 100%;
+  }
+
+  .belance-background{
+    border-radius: 20px;
+    width: 70%;
+    height: 1000px;
+    height: auto;
+  }
+
+  .information {
+    padding: 10px 0 10px 0;
+  }
+
+  .belance {
+    border-radius: 0;
+    flex-direction: column;
+  }
+
+  .belance-container {
+    width: 95%;
+    min-height: 400px;
+    justify-content: space-evenly;
+  }
+
+  .information {
+    padding: 20px 0 20px 0;
+  }
+
+  .more { 
+    font-size: 15px;
+  }
+
+  .belance .belance-container:nth-child(2) {
+    border-radius: 20px;
+  }
+
+  .rightPanel {
+    width: 90%;
+    height: 850px;
+    justify-content: space-evenly;
+  }
+
+  .developers-background {
+    border-radius: 20px;
+
+  }
+
+  .developers {
+    border-radius: 0;
+  }
+
+  .works-scroll-background {
+    border-radius: 20px;
+  }
+
+  .works-scroll {
+    border-radius: 0;
+  }
+
+  .img-overlay {
+   border-radius: 0; 
+   min-width: 101%;
+  }
+
+}
+
+@media all and ( max-width: 375px ) { 
+
+  .developer {
+    width: 95%;
+  }
+
+  .name {
+    font-size: 15px;
+  }
+
+  .workExpirience {
+    display: none;
+  }
+
+  .works {
+    font-size: 15px;
+  }
+
+  .level {
+    display: none;
+  }
+
 }

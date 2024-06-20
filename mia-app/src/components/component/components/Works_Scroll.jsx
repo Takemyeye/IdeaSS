@@ -42,7 +42,7 @@ const RightPanelBottom = () => {
             src={images[currentImageIndex]}
             alt={`img ${currentImageIndex + 1}`}
             style={{
-              objectFit: "cover",
+              objectFit: "contain",
               width: "100%",
               height: "100%",
             }}
