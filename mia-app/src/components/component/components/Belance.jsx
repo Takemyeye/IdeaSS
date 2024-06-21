@@ -78,7 +78,7 @@ const Belance = () => {
                 <span>{text[11]}</span>
                 <div className="text">{text[12]}</div>
                 <span>{text[13]}</span>
-                <Link to={'/abaut'}>
+                <Link to={'/about'}>
                    <div className="more">More...</div>
                 </Link>
               </div>

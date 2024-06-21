@@ -51,7 +51,9 @@ const Header = ({ hideNavigation, noJustify, hideBars }) => {
               <Link to={'/about'}>
                 <div className="left-container"> About </div>
               </Link>
-              <div className="left-container"> Contact Us </div>
+              <Link to="https://mail.google.com/mail/u/0/#search/mellovan2005%40gmail.com">
+                <div className="left-container"> Contact Us </div>
+              </Link>
               <div className="left-container"> Social <p>
                 <FontAwesomeIcon icon={faArrowRight} />
               </p>
