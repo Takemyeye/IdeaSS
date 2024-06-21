@@ -23,7 +23,7 @@ const Landing = () => {
   return (
     <>
       <Header hideNavigation={true} noJustify={true} hideBars={true}/>
-      <div className={`main ${fadeOut ? 'fade-out' : ''}`}>
+      <div className={`landing-main ${fadeOut ? 'fade-out' : ''}`}>
         <div className="landing-video">
           <video src={video} autoPlay loop muted playsInline></video>
           <div className="video-overlay"></div>

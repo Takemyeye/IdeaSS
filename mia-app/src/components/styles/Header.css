@@ -20,7 +20,6 @@
   height: auto;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
   flex-direction: row;
   transition: 0.5s ease-in-out;
 }

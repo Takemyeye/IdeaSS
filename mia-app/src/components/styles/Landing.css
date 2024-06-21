@@ -1,3 +1,18 @@
+.landing-main {
+  width: 100%;
+  min-height: 90vh;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 26px;
+  font-family: var(--text-font-family);
+  font-optical-sizing: var(--text-font-optical-sizing);
+  font-weight: var(--text-font-weight);
+  font-style: var(--text-font-style);
+  overflow: hidden;
+}
 .landing-video {
   position: relative;
   width: 70%;
@@ -40,6 +55,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  text-align: center;
   gap: 24px;
   animation: fromRight 1.5s ease-in-out forwards;
 }
