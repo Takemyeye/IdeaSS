@@ -15,7 +15,10 @@ html,body {
 ::selection {
   background: transparent;
 }
-a{
+h5 {
+color: var(--color-000);
+}
+a {
   color: inherit;
   text-decoration: none;
 }
@@ -29,6 +32,7 @@ a{
   --color-002: #2C3E50;
   --color-003: #4b8181;
   --color-004: #A8C0A0;
+  --color-005: rgb(206, 206, 206);
   --color-black: black;
   --gradient:  linear-gradient(120deg, #2c3e50,#4b8181,#a8c0a0);
 }
@@ -78,5 +82,21 @@ a{
   100% {
     opacity: 1;
     transform: translateX();
+  }
+}
+
+@keyframes toRight {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  80% {
+    transform: translateX(500px);
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
   }
 }

@@ -20,7 +20,7 @@
   cursor: auto;
 }
 
-.abaut-container {
+.about-container {
   width: 100%;
   height: 100%;
 }
@@ -183,7 +183,7 @@
   color: var(--color-001);
 }
 
-.abaut {
+.about {
   width: 90%;
   height: 100%;
   display: flex;

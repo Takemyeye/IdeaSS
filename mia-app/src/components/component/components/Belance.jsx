@@ -1,35 +1,35 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+const text = [
+  'Belance', 
+  'Your Trusted Partner in Modern Web Application Development',
+  'About',
+  'At Belance, we believe in the power of innovation. Our team of professionals specializes in creating high-quality web applications using the most advanced technologies.',
+  'Our Services',
+  'Angular Development',
+  'React Development',
+  'PHP Development',
+  'Node.js Development',
+  'Next.js Applications',
+  
+  'Our Company',
+  'Belance is a forward-thinking web development company dedicated to bringing your digital visions to life. Our mission is to deliver state-of-the-art web applications that not only meet but exceed your expectations. We combine creativity, technology, and a deep understanding of modern web development to provide solutions that are both innovative and reliable.',
+  'Why Belance?',
+  'Choosing Belance means partnering with a team that is dedicated to your success. We bring technical expertise, creative vision, and a client-centric approach to every project. Let us help you navigate the digital landscape and achieve your business objectives.',
+  'Design and Advertising Services',
+  'At Belance, we don’t just stop at web development. We also offer a full range of design and advertising services to ensure your brand stands out and reaches your target audience effectively.',
+  'Design Services',
+  'Our talented design team specializes in creating visually appealing and user-friendly designs that enhance your digital presence. Whether it’s a sleek website, engaging graphics, or a cohesive brand identity, we ensure that every design element reflects your brand\'s vision and values.',
+  'Advertising Services',
+  'We help you get noticed in the digital world. Our advertising experts craft targeted campaigns that drive traffic, increase engagement, and boost conversions. From social media marketing to search engine advertising, we use data-driven strategies to maximize your ROI.',
+];
+
+const img = ["img/angular.png","img/react.png",
+  "img/php.png","img/node.png","img/next.png"
+];
+
 const Belance = () => {
-
-  const text = [
-    'Belance', 
-    'Your Trusted Partner in Modern Web Application Development',
-    'About',
-    'At Belance, we believe in the power of innovation. Our team of professionals specializes in creating high-quality web applications using the most advanced technologies.',
-    'Our Services',
-    'Angular Development',
-    'React Development',
-    'PHP Development',
-    'Node.js Development',
-    'Next.js Applications',
-    
-    'Our Company',
-    'Belance is a forward-thinking web development company dedicated to bringing your digital visions to life. Our mission is to deliver state-of-the-art web applications that not only meet but exceed your expectations. We combine creativity, technology, and a deep understanding of modern web development to provide solutions that are both innovative and reliable.',
-    'Why Belance?',
-    'Choosing Belance means partnering with a team that is dedicated to your success. We bring technical expertise, creative vision, and a client-centric approach to every project. Let us help you navigate the digital landscape and achieve your business objectives.',
-    'Design and Advertising Services',
-    'At Belance, we don’t just stop at web development. We also offer a full range of design and advertising services to ensure your brand stands out and reaches your target audience effectively.',
-    'Design Services',
-    'Our talented design team specializes in creating visually appealing and user-friendly designs that enhance your digital presence. Whether it’s a sleek website, engaging graphics, or a cohesive brand identity, we ensure that every design element reflects your brand\'s vision and values.',
-    'Advertising Services',
-    'We help you get noticed in the digital world. Our advertising experts craft targeted campaigns that drive traffic, increase engagement, and boost conversions. From social media marketing to search engine advertising, we use data-driven strategies to maximize your ROI.',
-  ];
-
-  const img = ["img/angular.png","img/react.png",
-    "img/php.png","img/node.png","img/next.png"
-  ];
 
   return(
     <div className="belance-background">
@@ -40,7 +40,7 @@ const Belance = () => {
               <div className="home-logo"></div>
             </div>
             <div className="information">
-              <div className="abaut">
+              <div className="about">
                 <div className="text">Services</div>
                   {text[3]}
                   <div className="services">
@@ -73,7 +73,7 @@ const Belance = () => {
               <div className="home-logo"></div>
             </div>
             <div className="information">
-              <div className="abaut">
+              <div className="about">
                 <div className="text">{text[10]}</div>
                 <span>{text[11]}</span>
                 <div className="text">{text[12]}</div>

@@ -1,12 +1,22 @@
 import React from "react";
-import Soon from './Soon'
+import './styles/about.css';
 import Header from "../../Header";
+import LeftPanel from "./abaut-component/leftPanel";
+import RightPanel from "./abaut-component/rightPanel";
+import Information from "./abaut-component/information";
 
 const About = () => {
+
   return(
     <>
       <Header/>
-      <Soon/>
+      <div className="main-container">
+        <div className="main">
+          <LeftPanel/>
+          <RightPanel/>
+        </div>
+        <Information/>
+      </div>
     </>
   )
 }

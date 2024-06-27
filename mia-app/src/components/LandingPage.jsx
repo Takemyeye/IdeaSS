@@ -3,6 +3,12 @@ import { useNavigate } from "react-router-dom";
 import './styles/Landing.css';
 import Header from './Header';
 
+const landingText = [
+  'Innovating your success: Belance shapes your business future with top-tier web applications and creative solutions.'
+];
+
+const video = "video/landingVideo.mp4";
+
 const Landing = () => {
   const [fadeOut, setFadeOut] = useState(false);
   const navigate = useNavigate();
@@ -14,11 +20,6 @@ const Landing = () => {
     }, 1500); 
   };
 
-  const landingText = [
-    'Innovating your success: Belance shapes your business future with top-tier web applications and creative solutions.'
-  ];
-
-  const video = "video/landingVideo.mp4";
 
   return (
     <>
