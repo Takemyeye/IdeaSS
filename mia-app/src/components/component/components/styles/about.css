@@ -189,10 +189,6 @@
   height: 25vh;
  }
 
- .container-left .about-text-container:nth-child(2) {
-  height: 25vh;
- }
-
  .container-right .about-text-container {
   height: 45vh;
  }
