@@ -1,7 +1,7 @@
 .main {
   position: relative;
   width: 100%;
-  min-height: 90vh;
+  height: auto;
   background-color: black;
   display: flex;
   align-items: center;
@@ -148,7 +148,7 @@
   width: 90%;
   font-size: 25px;
   color: var(--color-001);
-  gap: 6px;
+  gap: 8px;
 }
 
 .skills-container {
@@ -324,7 +324,7 @@
 .info {
   font-size: 20px;
   position: absolute;
-  right: 9%;
+  right: 0;
   background-color: var(--color-000);
   padding: 2px 10px 2px 10px;
   border-radius: 50%;
@@ -487,6 +487,9 @@
     min-width: 101%;
    }
    
+  .description-background {
+    border-radius: 0;
+  }
 }
 
 @media all and ( max-width: 768px ) {
@@ -501,7 +504,7 @@
 
   .belance-background{
     border-radius: 20px;
-    width: 70%;
+    width: 90%;
     height: 1000px;
     height: auto;
   }
@@ -511,6 +514,7 @@
   }
 
   .belance {
+    
     border-radius: 0;
     flex-direction: column;
   }
@@ -572,6 +576,10 @@
   .name {
     font-size: 15px;
   }
+  
+  .home-logo {
+    display: none;
+  }
 
   .workExpirience {
     display: none;
@@ -583,6 +591,10 @@
 
   .level {
     display: none;
+  }
+
+  .developers-information {
+    gap: 2rem;
   }
 
 }

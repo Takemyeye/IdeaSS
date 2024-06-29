@@ -1,10 +1,13 @@
-import React, { useState, useEffect, useMemo } from "react";
+import React, { useState, useEffect, useMemo, useContext } from "react";
 import { Link } from "react-router-dom";
 import '../../styles/Home.css';
+import ActiveContext from '../../ActiveContext';
+import translations from '../../../utils/translations';
 
 const RightPanelBottom = () => {
-
-  const text = ['Worked with']
+  const { language } = useContext(ActiveContext);
+  const translation = useMemo(() => translations[language], [language]);
+  
 
   const images = useMemo(
     () => [
@@ -50,11 +53,11 @@ const RightPanelBottom = () => {
         </div>
         <div className="img-overlay">
           <div className="home-title"> 
-            {text[0]}
+            {translation.wirked}
             <div className="home-logo"></div>
           </div>
           <Link to={'/works'}>
-            <div className="more"> See more... </div>
+            <div className="more"> {translation.moreButtonText} </div>
           </Link>
         </div>
       </div>

@@ -1,17 +1,20 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useMemo, useContext } from "react";import { Link } from "react-router-dom";
 import './styles/soon.css'
+import ActiveContext from '../../ActiveContext';
+import translations from '../../../utils/translations';
 
 const Soon = () => {
+  const { language } = useContext(ActiveContext);
+  const translation = useMemo(() => translations[language], [language]);
 
   const video = "video/landingVideo.mp4";
 
   return(
       <div className="soon">
-        <div className="soon-text"> Coming Soon </div> 
+        <div className="soon-text"> {translation.comingSoon} </div> 
         <div className="start-index">
           <Link to={'/home'}>
-            <div className="start"> Go Home </div>
+            <div className="start"> {translation.goHome} </div>
           </Link>
         </div>
         <video src={video} autoPlay loop muted playsInline></video>

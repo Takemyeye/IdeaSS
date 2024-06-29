@@ -1,12 +1,13 @@
 .main-container {
   position: relative;
   width: 100%;
+  height: auto;
   background-color: black;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  gap: 32px;
+  gap: 2rem;
   font-family: var(--text-font-family);
   font-optical-sizing: var(--text-font-optical-sizing);
   font-weight: var(--text-font-weight);
@@ -21,7 +22,7 @@
   display: flex;
   justify-content: start;
   flex-direction: column;
-  gap: 5rem;
+  gap: 4rem;
   z-index: 1;
 }
 
@@ -30,7 +31,7 @@
   color: var(--color-001);
   width: 75%;
   height: 40vh;
-  font-size: 40px;
+  font-size:   clamp(20px, 2vw, 40px);
   font-weight: 600;
   display: flex;
   justify-content: start;
@@ -40,7 +41,7 @@
 
 .about-text-container span:nth-child(2) {
   color: var(--color-000);
-  font-size: 15px;
+  font-size: clamp(12px, 2vw, 16px);
   font-weight: 500;
 }
 
@@ -52,7 +53,7 @@
   align-items: end;
   justify-content: start;
   flex-direction: column;
-  gap: 5rem;
+  gap: 4rem;
   z-index: 1;
 }
 
@@ -109,7 +110,6 @@
 }
 
 .clients-container {
-  max-width: 80%;
   font-size: 13px;
   font-weight: 400;
   color: var(--color-000);
@@ -164,64 +164,84 @@
   height: 100%;
 }
 
-@media all and (max-width: 1024px) {
+@media all and ( max-width: 1440px ) {
 
-  .information-container {
-    align-items: center;
+  .main-container {
+    padding-bottom: 10rem;
   }
 
   .container-left {
-    width: 90%;
     align-items: center;
   }
 
   .container-right {
-    width: 90%;
+    align-items: center;
+  }
+
+  .about-text-container {
+    width: 100%;
+    height: auto;
+    min-height: 200px;
+  }
+
+  .information-container {
+    font-size:   clamp(20px, 2vw, 40px);
+  }
+
+}
+
+@media all and ( max-width: 1024px ) {
+
+  .container-left {
+    width: 80%;
+  }
+
+  .container-right {
+    width: 80%;
+  } 
+
+  .information-container {
+    width: 100%;
     align-items: center;
   }
 
   .bubna {
+    gap: 2rem;
+  }
+
+  .clients-container {
+    width: 200px;
+  }
+
+  .information-container .about-text-container {
+    width: 50%;
+    align-items: center;
+  }
+
+  .contact-us {
+    left: 0;
+    top: 10rem;
+    height: 30px;
+    width: 100px;
+  }
+}
+
+@media all and ( max-width:768px ) {
+
+  .bubna {
+    position: relative;
+    left: -60px;
+    width: 90%;
     flex-direction: column;
     align-items: center;
- }
+  }
+  .clients-container {
+    width: 250px;
+  }
 
- .container-left .about-text-container {
-  height: 25vh;
- }
-
- .container-right .about-text-container {
-  height: 45vh;
- }
-
- .container-right .about-text-container:nth-child(2) {
-  height: 25vh;
- }
-
- .coments {
-  width: 60%;
- }
-
- .information-container {
-  width: 90%;
- }
-
- .information-container .about-text-container {
-  width: 50%;
- }
-
- .about-text-container .contact-us {
-  display: none;
- }
-
- .about-text-container {
-  font-size: clamp(1rem, 3vw, 3rem);
- }
- 
- .about-text-container span:nth-child(2)  {
-  font-size: clamp(13px, 2vw, 16px);
-}
- .information-container {
-  font-size: clamp(1rem, 3vw, 3rem);
- }
-
+  .contact-us { 
+    width: 80px;
+    height: 25px;
+    font-size: clamp(12px, 2vw, 15px);
+  }
 }

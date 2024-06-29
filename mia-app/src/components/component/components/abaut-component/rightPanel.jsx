@@ -1,51 +1,45 @@
-import React from "react";
+import React, { useMemo, useContext}from "react";
 import '../styles/about.css';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
-
-const aboutText = [
-  'Our Values',
-  'Commitment to Excellence',
-  'We are dedicated to delivering exceptional results and exceeding our clients` expectations.',
-  'Collaboration and Transparency',
-  'We believe in open communication and a collaborative approach to ensure our clients are fully involved in the process.',
-  'Innovation and Creativity',
-  'We constantly strive to stay ahead of the curve, exploring new technologies and design trends to deliver innovative solutions.',
-  'Our Mission',
-  'our mission is to empower our clients with innovative digital solutions that drive their success. We believe in a collaborative approach, working closely with our clients to understand their unique needs and deliver tailored, high-quality results.'
-];
+import ActiveContext from "../../../ActiveContext";
+import translations from "../../../../utils/translations";
 
 const RightPanel = () => {
+
+const { language } = useContext(ActiveContext);
+
+const translation = useMemo(() => translations[language], [language]);
 
   return(
     <div className="container-right">
       <div className="about-text-container">
-        <span>{aboutText[0]}</span>
+        <span>{translation.ourValuesTitle}</span>
         <div className="values-container">
           <FontAwesomeIcon icon={faCheck} />
           <div className="text-container">
-            <span>{aboutText[1]}</span>
-            <span>{aboutText[2]}</span>
+            <span>{translation.ourValuesCommitment}</span>
+            <span>{translation.ourValuesCommitmentText}</span>
           </div>
         </div>
         <div className="values-container">
           <FontAwesomeIcon icon={faCheck} />
           <div className="text-container">
-            <span>{aboutText[3]}</span>
-            <span>{aboutText[4]}</span>
+            <span>{translation.ourValuesCollaboration}</span>
+            <span>{translation.ourValuesCollaborationText}</span>
           </div>
         </div>
         <div className="values-container">
           <FontAwesomeIcon icon={faCheck} />
           <div className="text-container">
-            <span>{aboutText[5]}</span>
-            <span>{aboutText[6]}</span>
+            <span>{translation.ourValuesInnovation}</span>
+            <span>{translation.ourValuesInnovationText}</span>
           </div>
         </div>
       </div>
       <div className="about-text-container">
-        <span>{aboutText[7]}</span>
-        <span>{aboutText[8]}</span>
+        <span>{translation.ourMissionTitle}</span>
+        <span>{translation.ourMissionText}</span>
       </div>
     </div>
   )

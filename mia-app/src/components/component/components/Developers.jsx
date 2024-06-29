@@ -1,12 +1,16 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useMemo, useContext  } from "react";
 import { Link } from "react-router-dom";
 import '../../styles/Home.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faCode, faInfo } from '@fortawesome/free-solid-svg-icons';
+import ActiveContext from '../../ActiveContext';
+import translations from '../../../utils/translations';
 
 const Developers = () => {
   const [hoverInfoVisible, setHoverInfoVisible] = useState(false);
   const [hoverInfoLevelVisible, setHoverInfoLevelVisible] = useState(false);
+  const { language } = useContext(ActiveContext);
+  const translation = useMemo(() => translations[language], [language]);
 
   const developersBackgroundRef = useRef(null);
 
@@ -35,7 +39,6 @@ const Developers = () => {
     };
   }, []);
 
-  const developers = ['Developers'];
   const developersData = [
     { name: 'Davide Pelucchini', experience: 'Ex: 1 month', level: '5', portfolioLink: '' },
     { name: 'Leandro Fonti', experience: 'Ex: 1 month', level: '5', portfolioLink: '' },
@@ -46,41 +49,41 @@ const Developers = () => {
   developersData.sort((a, b) => parseInt(b.level) - parseInt(a.level));
 
   const levelDescriptions = [
-    { level: 1, text: 'Basic web development skills. Typically perform tasks under the guidance of more experienced colleagues.' },
-    { level: 2, text: 'Deeper understanding of core development concepts. Can work independently on simple projects.' },
-    { level: 3, text: 'Experienced professionals with a strong grasp of application architecture and best development practices. Can tackle complex tasks and deliver high-quality products.' },
-    { level: 4, text: 'Developers who may temporarily not meet client expectations or quality standards. Additional support or training may be required.' },
-    { level: 5, text: 'Experts with extensive development experience, demonstrating high competence and ability to work independently. Often sought for handling key projects.' }
+    { level: 1, text: translation.levelDescription1 },
+    { level: 2, text: translation.levelDescription2 },
+    { level: 3, text: translation.levelDescription3 },
+    { level: 4, text: translation.levelDescription4 },
+    { level: 5, text: translation.levelDescription5 }
   ];
+
   levelDescriptions.sort((a, b) => parseInt(b.level) - parseInt(a.level));
 
   const developersInfo = [
-    { text: 'Initial Level: All developers start at level but they always have the opportunity to advance.'},
-    { text: 'All orders, wishes that will be written to us by mail |mellovan@gmail.com| are handled personally by the Belance team'},
-    { text: 'Maximum level: 5, which indicates the highest quality of work and speed of development.'},
-    { text: 'Level Reduction: Levels decrease with client dissatisfaction.'},
-    { text: 'Clients can choose developers for simple pages based on levels and portfolio. If you need a full-fledged application like "online store..." then Belance Team will handle this order'}
+    { text: translation.developersInfo1 },
+    { text: translation.developersInfo2 },
+    { text: translation.developersInfo3 },
+    { text: translation.developersInfo4 },
+    { text: translation.developersInfo5 }
   ];
 
   return (
     <div className="developers-background" ref={developersBackgroundRef}>
       <div className={`hover-info ${hoverInfoVisible ? 'visible' : ''}`}>
         <div className="developers-information">
-          <span> Developers in Belance </span>
-            {developersInfo.map(desc => (
-              <div className="classification">
-                <p key={desc.level} className={`level level-${desc.level}`}>{desc.level}</p>
-                {desc.text}
-              </div>
-            ))}
+          <span>{translation.developersTitle}</span>
+          {developersInfo.map((desc, index) => (
+            <div className="classification" key={index}>
+              {desc.text}
+            </div>
+          ))}
         </div>
       </div>
       <div className={`hover-info ${hoverInfoLevelVisible ? 'visible' : ''}`}>
         <div className="developers-information">
-          <span> Level System </span>
+          <span>{translation.levelSystem}</span>
           {levelDescriptions.map(desc => (
-            <div className="classification">
-              <p key={desc.level} className={`level level-${desc.level}`}>{desc.level}</p>
+            <div className="classification" key={desc.level}>
+              <p className={`level level-${desc.level}`}>{desc.level}</p>
               {desc.text}
             </div>
           ))}
@@ -88,9 +91,11 @@ const Developers = () => {
       </div>
       <div className="developers">
         <div className="home-title">
-          {developers[0]}
+          {translation.developersTitle}
           <div className="home-logo"></div>
-          <div className="info" onClick={handleInfoClick}> <FontAwesomeIcon icon={faInfo} /> </div>
+          <div className="info" onClick={handleInfoClick}>
+            <FontAwesomeIcon icon={faInfo} />
+          </div>
         </div>
         <div className="developers-container">
           {developersData.map((developer, index) => (
@@ -98,7 +103,9 @@ const Developers = () => {
               <div className="avatar"> <FontAwesomeIcon icon={faUser} /> </div>
               <div className="name"> {developer.name} </div>
               <div className="workExperience"> {developer.experience} </div>
-              <Link to={developer.portfolioLink} className="works"> Portfolio <FontAwesomeIcon icon={faCode} /></Link>
+              <Link to={developer.portfolioLink} className="works">
+                {translation.portfolio} <FontAwesomeIcon icon={faCode} />
+              </Link>
               <div className={`level level-${developer.level}`} onClick={levelClick}>lvl {developer.level}</div>
             </div>
           ))}

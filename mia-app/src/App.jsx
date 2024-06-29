@@ -6,18 +6,21 @@ import Works from './components/component/components/Works';
 import NotFound from './components/404';
 import Landing from './components/LandingPage';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { ActiveProvider } from './components/ActiveContext';
 
 function App() {
   return (
-      <Router>
+    <Router>
+      <ActiveProvider>
         <Routes>
           <Route exact path='/home' element={<Home />} />
-          <Route exact path='/about' element={<About />}/>
-          <Route exact path='/works' element={<Works />}/>
+          <Route exact path='/about' element={<About />} />
+          <Route exact path='/works' element={<Works />} />
           <Route exact path='/' element={<Landing />} />
           <Route exact path='*' element={<NotFound />} />
         </Routes>
-      </Router>
+      </ActiveProvider>
+    </Router>
   );
 }
 
