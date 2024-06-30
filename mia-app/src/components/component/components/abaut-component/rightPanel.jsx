@@ -1,5 +1,5 @@
 import React, { useMemo, useContext}from "react";
-import '../styles/about.css';
+import '../styles/about.scss';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import ActiveContext from "../../../ActiveContext";
@@ -14,7 +14,7 @@ const translation = useMemo(() => translations[language], [language]);
   return(
     <div className="container-right">
       <div className="about-text-container">
-        <span>{translation.ourValuesTitle}</span>
+        <h1>{translation.ourValuesTitle}</h1>
         <div className="values-container">
           <FontAwesomeIcon icon={faCheck} />
           <div className="text-container">
@@ -38,7 +38,7 @@ const translation = useMemo(() => translations[language], [language]);
         </div>
       </div>
       <div className="about-text-container">
-        <span>{translation.ourMissionTitle}</span>
+        <h1>{translation.ourMissionTitle}</h1>
         <span>{translation.ourMissionText}</span>
       </div>
     </div>

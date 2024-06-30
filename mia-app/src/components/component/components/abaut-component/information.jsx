@@ -1,5 +1,5 @@
 import React,{ useMemo, useContext}from "react";
-import '../styles/about.css';
+import '../styles/about.scss';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faQuoteRight } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
@@ -53,7 +53,7 @@ const translation = useMemo(() => translations[language], [language]);
         </div>
       </div>
       <div className="about-text-container">
-        <span>{translation.readyToGetStarted}</span>
+        <h1>{translation.readyToGetStarted}</h1>
         <span>{translation.contactUsText}</span>
         <div className="contact-us">
           <Link to="https://mail.google.com/mail/u/0/#search/mellovan2005%40gmail.com">

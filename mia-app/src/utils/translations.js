@@ -67,7 +67,13 @@ const translations = {
     wirked: 'Worked with',
     comingSoon: 'Coming Soon',
     goHome: 'Go Home',
-
+    ourProjectsTitle: 'Projects We Are Proud Of',
+    projectsDescription1: 'Take a look at some of our latest projects where we used cutting-edge technologies. Our team is dedicated to creating innovative solutions that help our clients achieve their goals.',
+    projectsDescription2: 'We take pride in our projects that showcase our expertise and creativity. Every project we undertake is unique and designed with the client’s specific needs in mind.',
+    ourWorks: 'Our Works',
+    descriptionWork1: "This site was built using Next.js, PostgreSQL, and Prisma, among other technologies. The company organizes Dota 2 tournaments, offering a platform for teams and players to compete in exciting and challenging events.",
+    descriptionWork2: 'A sushi restaurant website developed with React and Node.js, using MongoDB for the backend, and various other technologies. This project features a modern design and user-friendly interface for making reservations and browsing the menu.',
+    descriptionWork3: 'A portfolio website for one of our team members, created with React and other technologies. This project showcases their skills, previous work, and provides a platform for potential clients to get in touch.',
   },
   ru: {
     innovatingSuccess: 'Инновации для вашего успеха: Belance формирует будущее вашего бизнеса с помощью первоклассных веб-приложений и креативных решений.',
@@ -142,7 +148,13 @@ const translations = {
     wirked: 'Работал с',
     comingSoon: 'Скоро будет',
     goHome: 'На главную',
-
+    ourProjectsTitle: 'Проекты, которыми мы гордимся',
+    projectsDescription1: 'Взгляните на некоторые из наших последних разработок, в которых мы использовали самые современные технологии. Наша команда работает над созданием инновационных решений, которые помогают нашим клиентам достигать их целей.',
+    projectsDescription2: 'Мы гордимся тем, что наши проекты демонстрируют наш опыт и творческий подход. Каждый проект, который мы создаем, уникален и разработан с учетом индивидуальных потребностей заказчика.',
+    ourWorks: 'Наши работы',
+    descriptionWork1: 'Этот сайт был создан с использованием Next.js, PostgreSQL и Prisma, а также других технологий. Компания организует турниры по Dota 2, предоставляя платформу для команд и игроков, чтобы участвовать в увлекательных и сложных соревнованиях.',
+    descriptionWork2: 'Вебсайт ресторана суши, разработанный с использованием React и Node.js, с MongoDB на стороне сервера и различных других технологий. Этот проект включает современный дизайн и удобный интерфейс для бронирования столиков и просмотра меню.',
+    descriptionWork3: 'Портфолио одного из участников нашей команды, созданное с использованием React и других технологий. Этот проект демонстрирует их навыки, предыдущие работы и предоставляет платформу для потенциальных клиентов, чтобы связаться с ними.',
   },
   it: {
     innovatingSuccess: 'Innovare il tuo successo: Belance plasma il futuro della tua azienda con applicazioni web di alto livello e soluzioni creative.',
@@ -217,7 +229,13 @@ const translations = {
     wirked: 'Lavorato con',
     comingSoon: 'In Arrivo',
     goHome: 'Vai alla Home',
-
+    ourProjectsTitle: 'Progetti di cui siamo Orgogliosi',
+    projectsDescription1: 'Dai un’occhiata ad alcuni dei nostri ultimi progetti, in cui abbiamo utilizzato le tecnologie più moderne. Il nostro team è dedicato a creare soluzioni innovative che aiutano i nostri clienti a raggiungere i loro obiettivi.',
+    projectsDescription2: 'Siamo orgogliosi dei nostri progetti che mostrano la nostra esperienza e creatività. Ogni progetto che intraprendiamo è unico e progettato con le esigenze specifiche del cliente in mente.',
+    ourWorks: 'I Nostri Lavori',
+    descriptionWork1: 'Questo sito è stato realizzato utilizzando Next.js, PostgreSQL e Prisma, tra le altre tecnologie. L\'azienda organizza tornei di Dota 2, offrendo una piattaforma per squadre e giocatori per competere in eventi entusiasmanti e sfidanti.',
+    descriptionWork2: 'Un sito web per un ristorante di sushi sviluppato con React e Node.js, utilizzando MongoDB per il backend e altre tecnologie. Questo progetto presenta un design moderno e un’interfaccia utente intuitiva per effettuare prenotazioni e visualizzare il menu.',
+    descriptionWork3: 'Un sito web di portfolio per uno dei membri del nostro team, creato con React e altre tecnologie. Questo progetto mostra le loro competenze, i lavori precedenti e fornisce una piattaforma per i potenziali clienti per entrare in contatto.',
   },
   uk: {
     innovatingSuccess: 'Інновації для вашого успіху: Belance формує майбутнє вашого бізнесу завдяки високоякісним веб-додаткам і креативним рішенням.',
@@ -292,7 +310,13 @@ const translations = {
     wirked: 'Працював з',
     comingSoon: 'Скоро буде',
     goHome: 'На головну',
-
+    ourProjectsTitle: 'Проекти, якими ми пишаємося',
+    projectsDescription1: 'Ознайомтеся з деякими з наших останніх розробок, де ми використовували найсучасніші технології. Наша команда працює над створенням інноваційних рішень, які допомагають нашим клієнтам досягати своїх цілей.',
+    projectsDescription2: 'Ми пишаємося нашими проектами, які демонструють наш досвід та креативність. Кожен проект, який ми реалізуємо, є унікальним і розроблений з урахуванням специфічних потреб клієнта.',
+    ourWorks: 'Наші роботи',
+    descriptionWork1: 'Цей сайт був створений за допомогою Next.js, PostgreSQL і Prisma, а також інших технологій. Компанія організовує турніри з Dota 2, пропонуючи платформу для команд і гравців, щоб змагатися в захоплюючих і складних подіях.',
+    descriptionWork2: 'Вебсайт ресторану суші, розроблений за допомогою React і Node.js, з MongoDB на серверній частині та інших технологій. Цей проект має сучасний дизайн і зручний інтерфейс для бронювання столиків і перегляду меню.',
+    descriptionWork3: 'Портфоліо одного з учасників нашої команди, створене за допомогою React і інших технологій. Цей проект демонструє їхні навички, попередні роботи та надає платформу для потенційних клієнтів для зв’язку з ними.',
   },
   pl: {
     innovatingSuccess: 'Innowacje dla Twojego sukcesu: Belance kształtuje przyszłość Twojego biznesu dzięki aplikacjom webowym najwyższej jakości i kreatywnym rozwiązaniom.',
@@ -367,7 +391,13 @@ const translations = {
     wirked: 'Pracował z',
     comingSoon: 'Już wkrótce',
     goHome: 'Idź do Strony Głównej',
-
+    ourProjectsTitle: 'Projekty, z których jesteśmy dumni',
+    projectsDescription1: 'Zobacz niektóre z naszych najnowszych projektów, w których użyliśmy najnowocześniejszych technologii. Nasz zespół jest zaangażowany w tworzenie innowacyjnych rozwiązań, które pomagają naszym klientom osiągnąć ich cele.',
+    projectsDescription2: 'Jesteśmy dumni z naszych projektów, które pokazują nasze doświadczenie i kreatywność. Każdy projekt, który podejmujemy, jest unikalny i zaprojektowany z uwzględnieniem specyficznych potrzeb klienta.',
+    ourWorks: 'Nasze Prace',
+    descriptionWork1: 'Ta strona została zbudowana przy użyciu Next.js, PostgreSQL i Prisma, oraz innych technologii. Firma organizuje turnieje w Dota 2, oferując platformę dla drużyn i graczy do rywalizowania w ekscytujących i wymagających wydarzeniach.',
+    descriptionWork2: 'Strona internetowa restauracji sushi stworzona przy użyciu React i Node.js, z MongoDB na backendzie i innych technologii. Projekt charakteryzuje się nowoczesnym designem i przyjaznym interfejsem do rezerwacji stolików oraz przeglądania menu.',
+    descriptionWork3: 'Strona portfolio jednego z naszych członków zespołu, stworzona przy użyciu React i innych technologii. Projekt ten prezentuje ich umiejętności, dotychczasowe prace i oferuje platformę dla potencjalnych klientów, aby się z nimi skontaktować.',
   }
 };
 

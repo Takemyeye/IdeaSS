@@ -12,7 +12,7 @@ const RightPanelBottom = () => {
   const images = useMemo(
     () => [
       'img/SS-Portfolio.png',
-      'img/impactioum.jpg',
+      'img/impactium.jpg',
       'img/Sushi-Italia.jpg',
     ],
     []

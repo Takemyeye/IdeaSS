@@ -1,0 +1,102 @@
+@mixin flex($flex-direction: column , $justify-content:center, $align-item:center) {
+  display: flex;
+  align-items: $align-item;
+  justify-content: $justify-content;
+  flex-direction: $flex-direction;
+}
+@mixin font ($text-align:center){
+  font-size: clamp(12px, 1vw, 15px);
+  font-weight: 500;
+  text-align: $text-align;
+}
+
+.proud-container {
+  position: relative;
+  width: 100%;
+  font-family: var(--text-font-family);
+  font-optical-sizing: var(--text-font-optical-sizing);
+  font-weight: var(--text-font-weight);
+  font-style: var(--text-font-style);
+  color: var(--color-001);
+  gap: 4rem;
+  @include flex;
+}
+
+.title-container {
+  @include flex;
+  @include font;
+  width: 50%;
+  gap: 1rem;
+  animation: bottom 2s forwards;
+}
+
+.projects-container {
+  position: relative;
+  width: 100%;
+  @include flex(row,center);
+  gap: 2rem;
+  animation: bottom 2s forwards;
+}
+
+.projects {
+  @include flex(column,start);
+  @include font(none);
+  position: relative;
+  width: 23%;
+  min-height: 350px;
+  height: 40vh;
+  border-radius: 12px;
+  padding: 12px 0;
+  gap: 1rem;
+  box-shadow: 0 0 4px rgba(216, 216, 216, 0.2);
+
+    h3 {
+      color: var(--color-001);
+      font-weight: 600;
+    }
+
+    h4 {
+      color: var(--color-000);
+      font-weight: 500;
+    }
+}
+
+.wallpaper {
+  width: 90%;
+  height: 200px;
+
+  img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    object-fit: contain;
+  }
+}
+
+.description-projects {
+  @include flex(column,start,start);
+  width: 90%;
+  gap: 1rem;
+}
+
+@media all and ( max-width: 1024px ) {
+  .projects-container {
+    flex-direction: column;
+    padding: 2rem 0;
+
+    .projects {
+      width: 50%;
+    }
+  }
+}
+
+@media all and ( max-width: 768px ) {
+
+  .title-container {
+    width: 80%;
+  }
+
+  .projects {
+    width: 80% !important;
+  }
+}

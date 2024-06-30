@@ -8,7 +8,14 @@ const Description = () => {
   return (
     <div className="description-container">
       <div className="description-background">
-        <video src={video} autoPlay loop muted playsInline></video>
+        <video 
+          src={video}
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="auto">
+        </video>
         <div className="background"></div>
       </div>
     </div>

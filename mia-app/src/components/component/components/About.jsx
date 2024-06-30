@@ -1,5 +1,5 @@
 import React from "react";
-import './styles/about.css';
+import './styles/about.scss';
 import Header from "../../Header";
 import LeftPanel from "./abaut-component/leftPanel";
 import RightPanel from "./abaut-component/rightPanel";

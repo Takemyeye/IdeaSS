@@ -1,42 +1,60 @@
+@mixin center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .main-container {
   position: relative;
   width: 100%;
   height: auto;
   background-color: black;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
   gap: 2rem;
   font-family: var(--text-font-family);
   font-optical-sizing: var(--text-font-optical-sizing);
   font-weight: var(--text-font-weight);
   font-style: var(--text-font-style);
   overflow: hidden;
+  @include center;
+  flex-direction: column;
+
 }
 
-.container-left {
+.container-left,
+.container-right {
   position: relative;
   top: 3rem;
   width: 45%;
   display: flex;
-  justify-content: start;
   flex-direction: column;
   gap: 4rem;
   z-index: 1;
 }
 
-.about-text-container {
+.container-left {
+  justify-content: start;
+  animation: bottom 2s forwards;
+}
+
+.container-right {
+  align-items: end;
+  justify-content: start;
+  animation: bottom 2s forwards;
+}
+
+.about-text-container,
+.information-container {
   position: relative;
-  color: var(--color-001);
-  width: 75%;
-  height: 40vh;
-  font-size:   clamp(20px, 2vw, 40px);
   font-weight: 600;
   display: flex;
   justify-content: start;
   flex-direction: column;
   gap: 26px;
+}
+
+.about-text-container {
+  width: 75%;
+  height: 40vh;
 }
 
 .about-text-container span:nth-child(2) {
@@ -45,26 +63,36 @@
   font-weight: 500;
 }
 
-.container-right{
-  position: relative;
-  top: 3rem;
-  width: 45%;
+.information-container {
+  width: 88%;
+  min-height: 55vh;
+  
+  .about-text-container {
+    width: 40%;
+    top: 5rem;
+  }
+}
+
+.values-container,
+.clients-container {
   display: flex;
-  align-items: end;
   justify-content: start;
-  flex-direction: column;
-  gap: 4rem;
-  z-index: 1;
+  font-weight: 400;
+  gap: 8px;
 }
 
 .values-container {
-  display: flex;
-  justify-content: start;
   flex-direction: row;
-  font-size: 20px;
-  font-weight: 400;
+  font-size: 13px;
   color: var(--color-005);
-  gap: 8px;
+}
+
+.clients-container {
+  font-size: 13px;
+  color: var(--color-000);
+  display: flex;
+  align-items: start;
+  flex-direction: row;
 }
 
 .text-container {
@@ -76,23 +104,6 @@
 
 .text-container span:nth-child(1) {
   color: var(--color-005);
-}
-
-.information-container {
-  position: relative;
-  color: var(--color-001);
-  width: 88%;
-  min-height: 55vh;
-  display: flex;
-  flex-direction: column;
-  font-size: 40px;
-  font-weight: 600;
-  gap: 26px;
-}
-
-.information-container .about-text-container {
-  width: 40%;
-  top: 5rem;
 }
 
 .bubna {
@@ -109,27 +120,6 @@
   gap: 8px;
 }
 
-.clients-container {
-  font-size: 13px;
-  font-weight: 400;
-  color: var(--color-000);
-  display: flex;
-  align-items: start;
-  flex-direction: row;
-  gap: 8px;
-}
-
-.quoteRight {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--color-black);
-  font-size: 30px;
-  padding: 5px;
-  border-radius: 100px;
-  background-color: var(--color-001);
-}
-
 .clients {
   display: flex;
   flex-direction: column;
@@ -143,37 +133,38 @@
   font-weight: 500;
 }
 
+.quoteRight {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-black);
+  font-size: 30px;
+  padding: 5px;
+  border-radius: 100px;
+  background-color: var(--color-001);
+}
+
 .contact-us {
   position: absolute;
   right: -100%;
   top: 15%;
-  padding: 2px;
   display: flex;
   align-items: center;
-  justify-content: center;  
+  justify-content: center;
   font-size: 20px;
   font-weight: 500;
   color: var(--color-001);
   border: 2px whitesmoke solid;
   border-radius: 10px;
-  padding: 4px 10px 4px 10px;
+  padding: 4px 10px;
 }
 
-.contact {
-  width: 100%;
-  height: 100%;
-}
-
-@media all and ( max-width: 1440px ) {
-
+@media all and (max-width: 1440px) {
   .main-container {
     padding-bottom: 10rem;
   }
 
-  .container-left {
-    align-items: center;
-  }
-
+  .container-left,
   .container-right {
     align-items: center;
   }
@@ -185,24 +176,24 @@
   }
 
   .information-container {
-    font-size:   clamp(20px, 2vw, 40px);
+    font-size: clamp(20px, 2vw, 40px);
   }
-
 }
 
-@media all and ( max-width: 1024px ) {
-
-  .container-left {
-    width: 80%;
-  }
-
+@media all and (max-width: 1024px) {
+  .container-left,
   .container-right {
     width: 80%;
-  } 
+  }
 
   .information-container {
     width: 100%;
     align-items: center;
+
+    .about-text-container {
+      width: 50%;
+      align-items: center;
+    }
   }
 
   .bubna {
@@ -213,11 +204,6 @@
     width: 200px;
   }
 
-  .information-container .about-text-container {
-    width: 50%;
-    align-items: center;
-  }
-
   .contact-us {
     left: 0;
     top: 10rem;
@@ -226,8 +212,7 @@
   }
 }
 
-@media all and ( max-width:768px ) {
-
+@media all and (max-width: 768px) {
   .bubna {
     position: relative;
     left: -60px;
@@ -235,11 +220,12 @@
     flex-direction: column;
     align-items: center;
   }
+
   .clients-container {
     width: 250px;
   }
 
-  .contact-us { 
+  .contact-us {
     width: 80px;
     height: 25px;
     font-size: clamp(12px, 2vw, 15px);

@@ -1,12 +1,12 @@
 import React from "react";
-import Soon from './Soon'
 import Header from "../../Header";
+import Proud from "./prijects-component/Projects";
 
 const Works= () => {
   return(
     <>
-      <Header/>
-      <Soon/>
+      <Header />
+      <Proud />
     </>
   )
 }

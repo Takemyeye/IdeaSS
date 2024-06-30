@@ -211,7 +211,7 @@
   justify-content: center;
   flex-direction: row;
   gap: 26px;
-  animation: bottom 2s ease-in-out forwards;
+  animation: bottom 4s ease-in-out forwards;
 }
 
 .description-background {

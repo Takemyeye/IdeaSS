@@ -5,14 +5,10 @@ import Header from './Header';
 import translations from '../utils/translations';
 import ActiveContext from "./ActiveContext";
 
-const landingText = [
-  'Innovating your success: Belance shapes your business future with top-tier web applications and creative solutions.'
-];
-
 const video = "video/landingVideo.mp4";
 
 const Landing = () => {
-  const { language, handleLanguageChange } = useContext(ActiveContext);
+  const { language } = useContext(ActiveContext);
 
   const translation = useMemo(() => translations[language], [language]);
 
