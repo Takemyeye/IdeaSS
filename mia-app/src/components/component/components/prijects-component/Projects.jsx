@@ -2,6 +2,7 @@ import React, { useMemo, useContext } from "react";
 import '../styles/projects.scss';
 import ActiveContext from "../../../ActiveContext";
 import translations from "../../../../utils/translations";
+import { ProjectUnit } from "./ProjectUnit";
 
 const img = {
   ssPortfolio: 'img/SS-Portfolio.png',
@@ -24,39 +25,21 @@ const Proud = () => {
         <h3>{translation.projectsDescription2}</h3>
       </div>
       <div className="projects-container">
-        <div className="projects">
-          <div className="wallpaper">
-            <a href="https://impactium.fun/" target="_blank" rel="noopener noreferrer">
-              <img src={img.impactium} alt="Impactium" />
-            </a>
-          </div>
-          <div className="description-projects">
-            <h3>Impactium</h3>
-            <h4>{translation.descriptionWork1}..</h4>
-          </div>
-        </div>
-        <div className="projects">
-          <div className="wallpaper">
-            <a href="https://example.com" target="_blank" rel="noopener noreferrer">
-              <img src={img.sushi} alt="Sushi Italia" />
-            </a>
-          </div>
-          <div className="description-projects">
-            <h3>Sushi Italia</h3>
-            <h4>{translation.descriptionWork2}..</h4>
-          </div>
-        </div>
-        <div className="projects">
-          <div className="wallpaper">
-            <a href="https://soulswap-portfolio.netlify.app/" target="_blank" rel="noopener noreferrer">
-              <img src={img.ssPortfolio} alt="Soul Swap" />
-            </a>
-          </div>
-          <div className="description-projects">
-            <h3>SS-Portfolio</h3>
-            <h4>{translation.descriptionWork3}..</h4>
-          </div>
-        </div>
+        <ProjectUnit 
+          link='https://impactium.fun'
+          title='Impactium' 
+          description={translation.descriptionWork1}
+          image={img.impactium} />
+        <ProjectUnit 
+          link='https://example.com'
+          title='Sushi Italia' 
+          description={translation.descriptionWork2}
+          image={img.sushi} />
+        <ProjectUnit 
+          link='https://soulswap-portfolio.netlify.app/'
+          title='Soul Swap' 
+          description={translation.descriptionWork3}
+          image={img.ssPortfolio} />
       </div>
     </div>
   )
