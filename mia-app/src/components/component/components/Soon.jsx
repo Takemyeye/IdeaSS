@@ -1,5 +1,5 @@
 import React, { useMemo, useContext } from "react";import { Link } from "react-router-dom";
-import './styles/soon.css'
+import './styles/soon.scss'
 import ActiveContext from '../../ActiveContext';
 import translations from '../../../utils/translations';
 

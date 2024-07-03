@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
+
+
 * {
   padding: 0;
   margin: 0;
@@ -76,7 +78,7 @@ a {
     transform: translateX(30%);
     opacity: 0; 
   }
-  }
+}
 
 @keyframes bottom {
   0% {

@@ -1,5 +1,4 @@
 import React, { useMemo, useContext}from "react";
-import '../styles/about.scss';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import ActiveContext from "../../../ActiveContext";

@@ -1,5 +1,4 @@
 import React from "react";
-import '../styles/Home.css';
 import Belance from './components/Belance';
 import Description from './components/Description';
 

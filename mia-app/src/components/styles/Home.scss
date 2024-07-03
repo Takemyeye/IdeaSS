@@ -1,23 +1,14 @@
+@import '../../main.scss';
+
 .main {
+  @include font-text;
+  @include flex (row);
   position: relative;
   width: 100%;
   height: auto;
   background-color: black;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
   gap: 26px;
-  font-family: var(--text-font-family);
-  font-optical-sizing: var(--text-font-optical-sizing);
-  font-weight: var(--text-font-weight);
-  font-style: var(--text-font-style);
   overflow: hidden;
-}
-
-.ui img {
-  filter: grayscale(50%);
-  cursor: auto;
 }
 
 .about-container {
@@ -26,12 +17,9 @@
 }
 
 .leftPanel  {
+  @include flex (column);
   width: 55%;
   height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
   color: var(--color-000);
   gap: 26px;
 }
@@ -39,35 +27,26 @@
 .belance-background {
   width: 100%;
   height: 400px;
-  background: url(img/background-3.jpg);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  border-radius: 20px 20px 80px 20px;
   text-align: center;
   z-index: 1;
-  animation: bottom 2s ease-in-out forwards;
 }
 
 .belance {
+  @include flex (row,space-evenly,center);
   position: relative;
   width: 100%;
   height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  flex-direction: row;
   gap: 10px;
-  background-color: rgba(0, 0, 0, 0.87);
-  border-radius: 20px 20px 70px 20px;
+
+  .belance-container:nth-child(2) {
+    overflow: hidden;
+  }
 }
 
 .home-title {
+  @include flex (row,start);
   color: var(--color-001);
   font-size: 35px;
-  display: flex;
-  align-items: center;
-  flex-direction: row;
   gap: 8px;
 }
 
@@ -76,65 +55,37 @@
   height: 30px;
 }
 
-.belance-container:nth-child(1) .home-title .home-logo {
-  background: url(img/logo.png);
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
+.belance-container:nth-child(1) .home-logo {
+  @include img-position('img/logo.png');
 }
 
-.belance-container:nth-child(2) .home-title .home-logo {
-  background: url(img/abaut-logo.png);
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
-.belance-container {
-  backdrop-filter: blur(10px);
+.belance-container:nth-child(2) .home-logo {
+  @include img-position('img/abaut-logo.png');
 }
 
 .developers .home-title .home-logo {
-  background: url(img/dev-logo.png);
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
+  @include img-position('img/dev-logo.png');
 }
 
 .img-overlay .home-title .home-logo {
-  background: url(img/work-logo.png);
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
+  @include img-position('img/work-logo.png');
 }
 
 .belance-container {
+  @include flex (column,space-evenly,start);
   width: 45%;
   height: 95%;
-  display: flex;
-  justify-content: space-evenly;
-  flex-direction: column;
   animation: bottom 2s ease-in-out forwards;
 }
 
-.belance .belance-container:nth-child(2) {
-  overflow: hidden;
-  border-radius: 20px 20px 85px 20px;
-}
-
 .information {
+  @include flex (column,center,center);
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.445);
   border-radius: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
   gap: 8px;
   font-size: 13px;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 .text {
@@ -158,10 +109,7 @@
 }
 
 .skills {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: row;
+  @include flex (row, space-between, center);
   font-size: 15px;
   color: var(--color-000);
   gap: 8px;
@@ -176,7 +124,10 @@
   background-repeat: no-repeat;
   filter: drop-shadow(0px 0px 20px var(--color-001));
   padding: 1px;
-  cursor: pointer;
+
+    img {
+      filter: grayscale(50%);
+    }
 }
 
 .language {
@@ -184,12 +135,9 @@
 }
 
 .about {
+  @include flex (column, space-evenly, center);
   width: 90%;
   height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  flex-direction: column;
   gap: 8px;
 }
 
@@ -203,15 +151,12 @@
 }
 
 .description-container {
+  @include flex (row);
   position: relative;
   width: 100%;
   height: 300px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
   gap: 26px;
-  animation: bottom 4s ease-in-out forwards;
+  animation: bottom 2s ease-in-out forwards;
 }
 
 .description-background {
@@ -240,13 +185,9 @@
 /*RightPanel*/
 
 .rightPanel {
+  @include flex (column);
   width: 30%;
   height: auto;
-  height: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
   gap: 26px;
 }
 
@@ -254,11 +195,6 @@
   position: relative;
   width: 100%;
   height: 400px;
-  background: url(img/background-4.jpg);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  border-radius: 20px 20px 20px 80px;
   z-index: 1;
   overflow: hidden;
   animation: bottom 2s ease-in-out forwards;
@@ -289,11 +225,11 @@
   justify-content: space-evenly;
   flex-direction: column;
   gap: 8px;
-}
 
-.developers-information span {
-  font-size: 25px;
-  padding-bottom: 10px;
+    span {
+      font-size: 25px;
+      padding-bottom: 10px;
+    }
 }
 
 .classification {
@@ -309,15 +245,12 @@
 }
 
 .developers {  
+  @include flex (column);
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.87);
   border-radius: 20px 20px 20px 70px;
   color: var(--color-001);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
   gap: 8px;
 }
 
@@ -333,35 +266,23 @@
 }
 
 .developers-container {
+  @include flex (column, start, center);
   width: 95%;
   height: 80%;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
   gap: 8px;
 }
 
 .developer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: row;
-  background-color: rgba(0, 0, 0, 0.445);
-  border-radius: 20px;
+  @include flex (row, space-between, center);
   padding: 5px 10px 5px 10px;
   width: 90%;
   height: 15%;
 }
 
 .avatar {
-  width: 45px;
-  height: 45px;
+  @include flex (content);
+
   font-size: 30px;
-  background-color: black;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
 }
 
 .level {
@@ -420,17 +341,13 @@
 }
 
 .img-overlay {
+  @include flex (column, space-evenly, center);
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   max-width: 600px;
   height: 100%;
-  max-height: 300px;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  flex-direction: column;
   background-color: rgba(0, 0, 0, 0.445);
   backdrop-filter: blur(4px);
   animation: bottom 2s ease-in-out forwards;
@@ -450,14 +367,6 @@
     border-radius: 20px;
     width: 70%;
     height: 500px;
-  }
-
-  .belance {
-    border-radius: 0;
-  }
-
-  .belance .belance-container:nth-child(2) {
-    border-radius: 20px;
   }
 
   .rightPanel {
@@ -514,9 +423,12 @@
   }
 
   .belance {
-    
     border-radius: 0;
     flex-direction: column;
+
+    .belance-container:nth-child(2) {
+      border-radius: 20px;
+    }
   }
 
   .belance-container {
@@ -533,9 +445,6 @@
     font-size: 15px;
   }
 
-  .belance .belance-container:nth-child(2) {
-    border-radius: 20px;
-  }
 
   .rightPanel {
     width: 90%;

@@ -1,5 +1,4 @@
 import React,{ useMemo, useContext}from "react";
-import '../styles/about.scss';
 import ActiveContext from "../../../ActiveContext";
 import translations from "../../../../utils/translations";
 

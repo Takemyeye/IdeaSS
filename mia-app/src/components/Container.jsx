@@ -1,5 +1,4 @@
 import React from "react";
-import './styles/Home.css'
 import RightPanel from "./component/RightPanel";
 import LeftPanel from "./component/LeftPanel";
 

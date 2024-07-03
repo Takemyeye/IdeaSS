@@ -1,4 +1,4 @@
-export function ProjectUnit({ link, image, title, description }) {
+export function ProjectUnit({ link, image, title, description, }) {
   return (
     <div className="projects">
       <div className="wallpaper">

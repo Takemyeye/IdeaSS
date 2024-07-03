@@ -1,5 +1,4 @@
 import React from "react";
-import "../styles/Home.css";
 import RightPanelBottom from './components/Works_Scroll';
 import Developers from './components/Developers';
 

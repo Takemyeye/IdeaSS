@@ -1,5 +1,5 @@
 import React, { useContext, useState, useMemo, useEffect, useRef } from "react";
-import "./styles/Header.css";
+import "./styles/Header.scss";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight, faArrowLeft, faBars, faXmark } from "@fortawesome/free-solid-svg-icons";

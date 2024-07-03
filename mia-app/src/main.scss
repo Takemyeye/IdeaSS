@@ -1,0 +1,29 @@
+@mixin flex($flex-direction: column , $justify-content:center, $align-item:center) {
+  display: flex;
+  align-items: $align-item;
+  justify-content: $justify-content;
+  flex-direction: $flex-direction;
+}
+
+@mixin font ($text-align:center){
+  font-size: clamp(12px, 1vw, 15px);
+  font-weight: 500;
+  text-align: $text-align;
+}
+
+@mixin font-text {
+  font-family: var(--text-font-family);
+  font-optical-sizing: var(--text-font-optical-sizing);
+  font-weight: var(--text-font-weight);
+  font-style: var(--text-font-style);
+}
+
+@mixin center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin img-position($url,$size:contain) {
+  background: url($url) center / size no-repeat;
+}

@@ -1,6 +1,6 @@
 import React, { useState, useMemo, useContext } from "react";
 import { useNavigate } from "react-router-dom";
-import './styles/Landing.css';
+import './styles/Landing.scss';
 import Header from './Header';
 import translations from '../utils/translations';
 import ActiveContext from "./ActiveContext";
@@ -29,8 +29,8 @@ const Landing = () => {
       <div className={`landing-main ${fadeOut ? 'fade-out' : ''}`}>
         <div className="landing-video">
           <video src={video} autoPlay loop muted playsInline></video>
-          <div className="video-overlay"></div>
-          <div className="video-overlay-top"></div>
+          <div class="video-overlay"></div>
+          <div class="video-overlay video-overlay--top"></div>
         </div>
         <div className="landing-start">
           <div className="text"> Belance </div>

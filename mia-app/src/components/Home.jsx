@@ -1,6 +1,5 @@
 import React from "react";
-import './styles/Home.css';
-import './styles/layout.module.css'
+import './styles/Home.scss';
 import Container from './Container'
 import Header from './Header';
 

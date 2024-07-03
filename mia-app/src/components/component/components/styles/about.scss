@@ -1,23 +1,15 @@
-@mixin center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+@import '../../../../main.scss';
 
 .main-container {
+  @include font-text;
+  @include center;
   position: relative;
   width: 100%;
   height: auto;
   background-color: black;
   gap: 2rem;
-  font-family: var(--text-font-family);
-  font-optical-sizing: var(--text-font-optical-sizing);
-  font-weight: var(--text-font-weight);
-  font-style: var(--text-font-style);
   overflow: hidden;
-  @include center;
   flex-direction: column;
-
 }
 
 .container-left,
@@ -66,7 +58,9 @@
 .information-container {
   width: 88%;
   min-height: 55vh;
-  
+  color: var(--color-001);
+  font-size: clamp(20px, 2vw, 40px);
+
   .about-text-container {
     width: 40%;
     top: 5rem;
@@ -78,6 +72,7 @@
   display: flex;
   justify-content: start;
   font-weight: 400;
+
   gap: 8px;
 }
 
@@ -173,10 +168,6 @@
     width: 100%;
     height: auto;
     min-height: 200px;
-  }
-
-  .information-container {
-    font-size: clamp(20px, 2vw, 40px);
   }
 }
 

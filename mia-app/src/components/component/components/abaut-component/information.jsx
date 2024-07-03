@@ -1,8 +1,6 @@
 import React,{ useMemo, useContext}from "react";
-import '../styles/about.scss';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faQuoteRight } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
+import { ComentUnit } from "./coments/comentUnit";
 import ActiveContext from "../../../ActiveContext";
 import translations from "../../../../utils/translations";
 
@@ -15,42 +13,18 @@ const translation = useMemo(() => translations[language], [language]);
     <div className="information-container">
       <span> {translation.clientsTitle} </span>
       <div className="bubna">
-        <div className="coments">
-          <div className="clients-container">
-            <div className="quoteRight">
-              <FontAwesomeIcon icon={faQuoteRight}/>
-            </div>
-            <span> {translation.client1Quote} </span>
-          </div>
-          <div className="clients">
-            <span> {translation.client1Name} </span>
-            <span> {translation.client1Company} </span>
-          </div>
-        </div>
-        <div className="coments">
-          <div className="clients-container">
-            <div className="quoteRight">
-              <FontAwesomeIcon icon={faQuoteRight}/>
-            </div>
-            <span> {translation.client2Quote} </span>
-          </div>
-          <div className="clients">
-            <span> {translation.client2Name} </span>
-            <span> {translation.client2Company} </span>
-          </div>
-        </div>
-        <div className="coments">
-          <div className="clients-container">
-            <div className="quoteRight">
-              <FontAwesomeIcon icon={faQuoteRight}/>
-            </div>
-            <span> {translation.client3Quote} </span>
-          </div>
-          <div className="clients">
-            <span> {translation.client3Name} </span>
-            <span> {translation.client3Company} </span>
-          </div>
-        </div>
+        <ComentUnit
+          clientQuote={translation.client1Quote}
+          clientName={translation.client1Name}
+          clientCompany={translation.client1Company} />
+        <ComentUnit
+          clientQuote={translation.client2Quote}
+          clientName={translation.client2Name}
+          clientCompany={translation.client2Company} />
+        <ComentUnit
+          clientQuote={translation.client3Quote}
+          clientName={translation.client3Name}
+          clientCompany={translation.client3Company} />
       </div>
       <div className="about-text-container">
         <h1>{translation.readyToGetStarted}</h1>

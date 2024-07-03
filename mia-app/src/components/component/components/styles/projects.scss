@@ -1,16 +1,7 @@
-@mixin flex($flex-direction: column , $justify-content:center, $align-item:center) {
-  display: flex;
-  align-items: $align-item;
-  justify-content: $justify-content;
-  flex-direction: $flex-direction;
-}
-@mixin font ($text-align:center){
-  font-size: clamp(12px, 1vw, 15px);
-  font-weight: 500;
-  text-align: $text-align;
-}
+@import '../../../../main.scss';
 
 .proud-container {
+  @include flex;
   position: relative;
   width: 100%;
   font-family: var(--text-font-family);
@@ -19,7 +10,6 @@
   font-style: var(--text-font-style);
   color: var(--color-001);
   gap: 4rem;
-  @include flex;
 }
 
 .title-container {
@@ -31,9 +21,9 @@
 }
 
 .projects-container {
+  @include flex(row,center);
   position: relative;
   width: 100%;
-  @include flex(row,center);
   gap: 2rem;
   animation: bottom 2s forwards;
 }
@@ -59,6 +49,7 @@
       color: var(--color-000);
       font-weight: 500;
     }
+   
 }
 
 .wallpaper {

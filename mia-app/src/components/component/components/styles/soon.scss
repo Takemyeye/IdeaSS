@@ -1,3 +1,4 @@
+@import url(../../../../App.scss);
 .soon {
   position: relative;
   width: 100%;
@@ -9,10 +10,7 @@
   justify-content: center;
   flex-direction: column;
   gap: 8px;
-  font-family: var(--text-font-family);
-  font-optical-sizing: var(--text-font-optical-sizing);
-  font-weight: var(--text-font-weight);
-  font-style: var(--text-font-style);
+  @include font-text;
   overflow: hidden;
   animation: bottom 3s ease-in-out forwards;
 }

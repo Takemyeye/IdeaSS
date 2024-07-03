@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import './styles/Landing.css';
+import './styles/Landing.scss';
 import Header from './Header';
 
 const NotFound = () => {

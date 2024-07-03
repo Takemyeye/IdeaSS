@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useMemo, useContext } from "react";
 import { Link } from "react-router-dom";
-import '../../styles/Home.css';
 import ActiveContext from '../../ActiveContext';
 import translations from '../../../utils/translations';
 
