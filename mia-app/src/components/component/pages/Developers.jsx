@@ -69,7 +69,7 @@ const Developers = () => {
     <div className="developers-background" ref={developersBackgroundRef}>
       <div className={`hover-info ${hoverInfoVisible ? 'visible' : ''}`}>
         <div className="developers-information">
-          <span>{translation.developersTitle}</span>
+          <span> {translation.developersTitle} </span>
           {developersInfo.map((desc, index) => (
             <div className="classification" key={index}>
               {desc.text}
@@ -79,7 +79,7 @@ const Developers = () => {
       </div>
       <div className={`hover-info ${hoverInfoLevelVisible ? 'visible' : ''}`}>
         <div className="developers-information">
-          <span>{translation.levelSystem}</span>
+          <span> {translation.levelSystem} </span>
           {levelDescriptions.map(desc => (
             <div className="classification" key={desc.level}>
               <p className={`level level-${desc.level}`}>{desc.level}</p>

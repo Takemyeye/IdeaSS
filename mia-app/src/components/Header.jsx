@@ -2,7 +2,9 @@ import React, { useContext, useState, useMemo, useEffect, useRef } from "react";
 import "./styles/Header.scss";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRight, faArrowLeft, faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
+import { faArrowLeft, faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
+import { HeaderUnit, Navigation } from "./component/headerUnit";
+import { LanguageUnit } from "./component/languageUnit";
 import translations from '../utils/translations';
 import ActiveContext from "./ActiveContext";
 
@@ -11,10 +13,10 @@ const img = ['img/Italy.svg', 'img/England.svg', 'img/Russia.svg', 'img/Ukraine.
 const Header = ({ hideNavigation, noJustify, hideBars }) => {
   const [navigationVisible, setNavigationVisible] = useState(false);
   const [languageMenuVisible, setLanguageMenuVisible] = useState(false);
-  const { language, handleLanguageChange } = useContext(ActiveContext);
-
+  const { language } = useContext(ActiveContext);
+  
   const translation = useMemo(() => translations[language], [language]);
-
+  
   const languageMenuRef = useRef(null);
 
   const toggleBars = () => {
@@ -67,23 +69,17 @@ const Header = ({ hideNavigation, noJustify, hideBars }) => {
               <FontAwesomeIcon icon={faArrowLeft} /> 
               {translation.back}
             </div>
-            <Link to={'/about'}>
-              <div className="left-container"> { translation.about } </div>
-            </Link>
-            <Link to="https://mail.google.com/mail/u/0/#search/mellovan2005%40gmail.com">
-              <div className="left-container"> { translation.contactUs } </div>
-            </Link>
+            <HeaderUnit 
+              link='/about' 
+              text={translation.about}/>
+            <HeaderUnit 
+              link="https://mail.google.com/mail/u/0/#search/mellovan2005%40gmail.com" 
+              text={translation.contactUs}/>
             <div className="left-container" onClick={() => setLanguageMenuVisible(!languageMenuVisible)}> 
               { translation.language } 
             </div>
-            <div className="left-container"> 
-              {translation.social} 
-              <p><FontAwesomeIcon icon={faArrowRight} /></p>
-            </div>
-            <div className="left-container"> 
-              {translation.partner} 
-              <p><FontAwesomeIcon icon={faArrowRight} /></p>
-            </div>
+            <Navigation text={translation.social}/>
+            <Navigation text={translation.partner}/>
           </div>
         )}
       </div>
@@ -96,26 +92,26 @@ const Header = ({ hideNavigation, noJustify, hideBars }) => {
             <FontAwesomeIcon icon={faXmark} /> 
             {translation.language}
           </span>
-          <div className="language-block" onClick={() => handleLanguageChange('it')}>
-             {translation.it}
-             <img src={img[0]} alt="Italian flag" /> 
-          </div>
-          <div className="language-block" onClick={() => handleLanguageChange('en')}>           
-            {translation.en} 
-            <img src={img[1]} alt="English flag" /> 
-          </div>
-          <div className="language-block" onClick={() => handleLanguageChange('ru')}>              
-            {translation.ru} 
-            <img src={img[2]} alt="Russian flag" /> 
-          </div>
-          <div className="language-block" onClick={() => handleLanguageChange('uk')}>              
-            {translation.uk} 
-            <img src={img[3]} alt="Ukrainian flag" /> 
-          </div>
-          <div className="language-block" onClick={() => handleLanguageChange('pl')}>              
-            {translation.pl} 
-            <img src={img[4]} alt="Polish flag" /> 
-          </div>
+          <LanguageUnit
+            img={img[0]}
+            text={translation.it}
+            language='it'/>
+          <LanguageUnit
+            img={img[1]}
+            text={translation.en}
+            language='en'/>
+          <LanguageUnit
+            img={img[2]}
+            text={translation.ru}
+            language='ru'/>
+          <LanguageUnit
+            img={img[3]}
+            text={translation.uk}
+            language='uk'/>
+          <LanguageUnit
+            img={img[4]}
+            text={translation.pl}
+            language='pl'/>
         </div>
       </div>
     </header>

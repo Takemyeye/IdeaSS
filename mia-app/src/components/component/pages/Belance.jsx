@@ -33,7 +33,7 @@ const Belance = () => {
           </div>
           <div className="information">
             <div className="about">
-              <div className="text">{translation.servicesTitle}</div>
+              <div className="text">{translation.whyBelanceTitle}</div>
               {translation.aboutText}
               <div className="services">
                 {translation.servicesTitle}

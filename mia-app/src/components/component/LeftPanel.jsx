@@ -1,6 +1,6 @@
 import React from "react";
-import Belance from './components/Belance';
-import Description from './components/Description';
+import Belance from './pages/Belance';
+import Description from './pages/Description';
 
 const LeftPanel = () => {
 
