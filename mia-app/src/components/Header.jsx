@@ -84,7 +84,9 @@ const Header = ({ hideNavigation, noJustify, hideBars }) => {
         )}
       </div>
       <div className="right-container">
-        <div className="sign">{translation.sign}</div>
+        <Link to='/register'>
+          <div className="sign">{translation.sign}</div>
+        </Link>
       </div>
       <div className={`changeLanguage ${languageMenuVisible ? 'show' : ''}`} ref={languageMenuRef}>
         <div className="language-container">

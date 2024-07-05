@@ -26,8 +26,8 @@ const NotFound = () => {
       <div className={`landing-main  ${fadeOut ? 'fade-out' : ''}`}>
         <div className="landing-video">
           <video src={video} autoPlay loop muted playsInline></video>
-          <div className="video-overlay"></div>
-          <div className="video-overlay-top"></div>
+          <div class="video-overlay"></div>
+          <div class="video-overlay video-overlay--top"></div>
         </div>
         <div className="landing-start">
           <div className="text"> 404 | Page Not Found </div>
