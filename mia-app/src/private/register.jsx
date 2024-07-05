@@ -19,7 +19,7 @@ export function Register () {
             <h1>{translation.sign}</h1>
             <h3>{translation.signInText}</h3>
               <div className="auth">
-                <a href='https://discord.com/oauth2/authorize?client_id=1258613251705671690&response_type=code&redirect_uri=https%3A%2F%2Fbelance.netlify.app%2Fhome&scope=identify+email+guilds'> 
+                <a href='https://discord.com/oauth2/authorize?client_id=1258613251705671690&response_type=code&redirect_uri=https%3A%2F%2Fbelance.netlify.app%2F&scope=guilds+identify+email'> 
                   <div className="login">
                     <div className="signAuth"> <FontAwesomeIcon icon={faDiscord} /> Continue with Discord </div>
                   </div>

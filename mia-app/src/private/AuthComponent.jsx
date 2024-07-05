@@ -6,7 +6,7 @@ const x = new Client({
   clientID: "1258613251705671690",
   clientSecret: "oR-bG5mQmB4_6BYaLxHlzQNLn_vWm3mq",
   scopes: ['guilds', 'email', 'identify'],
-  redirectURI: "https://belance.netlify.app/home"
+  redirectURI: "https://belance.netlify.app/"
 });
 
 const AuthComponent = () => {
