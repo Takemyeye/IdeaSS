@@ -28,7 +28,7 @@ header {
 }
 
 .logo-title {
-  min-width: 200px;
+  min-width: 170px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -37,8 +37,8 @@ header {
 }
 
 .logo {
-  width: 80px;
-  height: 80px;
+  width: 70px;
+  height: 70px;
   background-image: url(img/logo.png);
   background-position: center;
   background-size: contain;
@@ -124,6 +124,26 @@ header {
   border-radius: 10px;
   padding: 4px 10px 4px 10px;
   transition: 0.5s ease-in-out;
+}
+
+.user-info {
+  width: 100%;
+  min-width: 200px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 1rem;
+
+    img {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+    }
+    h3 {
+      color: var(--color-001);
+    }
 }
 
 .changeLanguage {

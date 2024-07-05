@@ -74,6 +74,7 @@ const translations = {
     descriptionWork1: "This site was built using Next.js, PostgreSQL, and Prisma, among other technologies. The company organizes Dota 2 tournaments, offering a platform for teams and players to compete in exciting and challenging events.",
     descriptionWork2: 'A sushi restaurant website developed with React and Node.js, using MongoDB for the backend, and various other technologies. This project features a modern design and user-friendly interface for making reservations and browsing the menu.',
     descriptionWork3: 'A portfolio website for one of our team members, created with React and other technologies. This project showcases their skills, previous work, and provides a platform for potential clients to get in touch.',
+    signInText: 'Sign in to your account using one of the following platforms',
 
   },
   ru: {
@@ -156,6 +157,7 @@ const translations = {
     descriptionWork1: 'Этот сайт был создан с использованием Next.js, PostgreSQL и Prisma, а также других технологий. Компания организует турниры по Dota 2, предоставляя платформу для команд и игроков, чтобы участвовать в увлекательных и сложных соревнованиях.',
     descriptionWork2: 'Вебсайт ресторана суши, разработанный с использованием React и Node.js, с MongoDB на стороне сервера и различных других технологий. Этот проект включает современный дизайн и удобный интерфейс для бронирования столиков и просмотра меню.',
     descriptionWork3: 'Портфолио одного из участников нашей команды, созданное с использованием React и других технологий. Этот проект демонстрирует их навыки, предыдущие работы и предоставляет платформу для потенциальных клиентов, чтобы связаться с ними.',
+    signInText: 'Войдите в свой аккаунт, используя одну из следующих платформ',
 
   },
   it: {
@@ -238,6 +240,7 @@ const translations = {
     descriptionWork1: 'Questo sito è stato realizzato utilizzando Next.js, PostgreSQL e Prisma, tra le altre tecnologie. L\'azienda organizza tornei di Dota 2, offrendo una piattaforma per squadre e giocatori per competere in eventi entusiasmanti e sfidanti.',
     descriptionWork2: 'Un sito web per un ristorante di sushi sviluppato con React e Node.js, utilizzando MongoDB per il backend e altre tecnologie. Questo progetto presenta un design moderno e un’interfaccia utente intuitiva per effettuare prenotazioni e visualizzare il menu.',
     descriptionWork3: 'Un sito web di portfolio per uno dei membri del nostro team, creato con React e altre tecnologie. Questo progetto mostra le loro competenze, i lavori precedenti e fornisce una piattaforma per i potenziali clienti per entrare in contatto.',
+    signInText: 'Accedi al tuo account utilizzando una delle seguenti piattaforme',
 
 
   },
@@ -321,6 +324,7 @@ const translations = {
     descriptionWork1: 'Цей сайт був створений за допомогою Next.js, PostgreSQL і Prisma, а також інших технологій. Компанія організовує турніри з Dota 2, пропонуючи платформу для команд і гравців, щоб змагатися в захоплюючих і складних подіях.',
     descriptionWork2: 'Вебсайт ресторану суші, розроблений за допомогою React і Node.js, з MongoDB на серверній частині та інших технологій. Цей проект має сучасний дизайн і зручний інтерфейс для бронювання столиків і перегляду меню.',
     descriptionWork3: 'Портфоліо одного з учасників нашої команди, створене за допомогою React і інших технологій. Цей проект демонструє їхні навички, попередні роботи та надає платформу для потенційних клієнтів для зв’язку з ними.',
+    signInText: 'Увійдіть до свого акаунту, використовуючи одну з наступних платформ',
 
 
   },
@@ -404,6 +408,7 @@ const translations = {
     descriptionWork1: 'Ta strona została zbudowana przy użyciu Next.js, PostgreSQL i Prisma, oraz innych technologii. Firma organizuje turnieje w Dota 2, oferując platformę dla drużyn i graczy do rywalizowania w ekscytujących i wymagających wydarzeniach.',
     descriptionWork2: 'Strona internetowa restauracji sushi stworzona przy użyciu React i Node.js, z MongoDB na backendzie i innych technologii. Projekt charakteryzuje się nowoczesnym designem i przyjaznym interfejsem do rezerwacji stolików oraz przeglądania menu.',
     descriptionWork3: 'Strona portfolio jednego z naszych członków zespołu, stworzona przy użyciu React i innych technologii. Projekt ten prezentuje ich umiejętności, dotychczasowe prace i oferuje platformę dla potencjalnych klientów, aby się z nimi skontaktować.',
+    signInText: 'Zaloguj się do swojego konta, używając jednej z poniższych platform',
 
   }
 };

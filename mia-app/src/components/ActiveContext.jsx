@@ -4,13 +4,30 @@ const ActiveContext = createContext();
 
 export const ActiveProvider = ({ children }) => {
   const [language, setLanguage] = useState(localStorage.getItem('language') || 'it');
+  const [user, setUser] = useState(JSON.parse(localStorage.getItem('user')) || null);
 
   useEffect(() => {
     localStorage.setItem('language', language);
   }, [language]);
 
+  useEffect(() => {
+    if (user) {
+      localStorage.setItem('user', JSON.stringify(user));
+    } else {
+      localStorage.removeItem('user');
+    }
+  }, [user]);
+
   const handleLanguageChange = (lang) => {
     setLanguage(lang);
+  };
+
+  const updateUser = (user) => {
+    setUser(user);
+  };
+
+  const clearUser = () => {
+    setUser(null);
   };
 
   return (
@@ -18,6 +35,9 @@ export const ActiveProvider = ({ children }) => {
       value={{
         language,
         handleLanguageChange,
+        user,
+        updateUser,
+        clearUser,
       }}
     >
       {children}

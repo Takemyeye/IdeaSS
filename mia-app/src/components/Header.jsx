@@ -13,10 +13,10 @@ const img = ['img/Italy.svg', 'img/England.svg', 'img/Russia.svg', 'img/Ukraine.
 const Header = ({ hideNavigation, noJustify, hideBars }) => {
   const [navigationVisible, setNavigationVisible] = useState(false);
   const [languageMenuVisible, setLanguageMenuVisible] = useState(false);
-  const { language } = useContext(ActiveContext);
-  
+  const { language, user } = useContext(ActiveContext);
+
   const translation = useMemo(() => translations[language], [language]);
-  
+
   const languageMenuRef = useRef(null);
 
   const toggleBars = () => {
@@ -66,7 +66,7 @@ const Header = ({ hideNavigation, noJustify, hideBars }) => {
         {!hideNavigation && (
           <div className="navigation" style={{ display: navigationVisible ? 'flex' : 'none' }}>
             <div className="back" onClick={toggleBars}>
-              <FontAwesomeIcon icon={faArrowLeft} /> 
+              <FontAwesomeIcon icon={faArrowLeft} />
               {translation.back}
             </div>
             <HeaderUnit 
@@ -76,7 +76,7 @@ const Header = ({ hideNavigation, noJustify, hideBars }) => {
               link="https://mail.google.com/mail/u/0/#search/mellovan2005%40gmail.com" 
               text={translation.contactUs}/>
             <div className="left-container" onClick={() => setLanguageMenuVisible(!languageMenuVisible)}> 
-              { translation.language } 
+              {translation.language} 
             </div>
             <Navigation text={translation.social}/>
             <Navigation text={translation.partner}/>
@@ -84,9 +84,18 @@ const Header = ({ hideNavigation, noJustify, hideBars }) => {
         )}
       </div>
       <div className="right-container">
-        <Link to='/register'>
-          <div className="sign">{translation.sign}</div>
-        </Link>
+        {user ? (
+          <div className="user-info">
+            <img src={`https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}.png`} alt={`Аватар пользователя ${user.username}`} />
+            <h3>{user.username}</h3>
+          </div>
+        ) : (
+          <Link to='/register'>
+            <div className="sign">
+              {translation.sign}
+            </div>
+          </Link>
+        )}
       </div>
       <div className={`changeLanguage ${languageMenuVisible ? 'show' : ''}`} ref={languageMenuRef}>
         <div className="language-container">
