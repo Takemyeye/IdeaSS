@@ -11,6 +11,9 @@ export function Register () {
   const { language } = useContext(ActiveContext);
   const translation = useMemo(() => translations[language], [language]);
 
+  const GITHUB_CLIENT_ID = 'Ov23livGOC5F5BsZaTo9';
+  const GITHUB_REDIRECT_URI = 'http://localhost:3000';
+
   return (
     <>
       <Header/>
@@ -19,15 +22,16 @@ export function Register () {
             <h1>{translation.sign}</h1>
             <h3>{translation.signInText}</h3>
               <div className="auth">
-                <a href='https://discord.com/oauth2/authorize?client_id=1258613251705671690&response_type=code&redirect_uri=https%3A%2F%2Fbelance.netlify.app%2F&scope=guilds+identify+email'> 
+                <a href='https://discord.com/oauth2/authorize?client_id=1258613251705671690&response_type=code&redirect_uri=http%3A%2F%2Flocalhost%3A3000&scope=guilds+identify+email'> 
                   <div className="login">
                     <div className="signAuth"> <FontAwesomeIcon icon={faDiscord} /> Continue with Discord </div>
                   </div>
                 </a>
-                <div className="login">
-                  <div className="lock"> <FontAwesomeIcon icon={faLock} /> </div>
-                  <div className="signAuth"> <FontAwesomeIcon icon={faGithub} /> Continue with GitHub </div>
-                </div>
+                <a href={`https://github.com/login/oauth/authorize?client_id=${GITHUB_CLIENT_ID}&redirect_uri=${encodeURIComponent(GITHUB_REDIRECT_URI)}&scope=user`}>
+                  <div className="login">
+                    <div className="signAuth"> <FontAwesomeIcon icon={faGithub} /> Continue with GitHub </div>
+                  </div>
+                </a>
                 <div className="login">
                   <div className="lock"> <FontAwesomeIcon icon={faLock} /> </div>
                   <div className="signAuth"> <FontAwesomeIcon icon={faGoogle} /> Continue with Google </div>

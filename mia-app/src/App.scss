@@ -36,6 +36,11 @@ h1 {
   color: var(--color-001);
 }
 
+h2 {
+  color: var(--color-001);
+  font-size: clamp(12px, 2vw, 15px);
+}
+
 h3 {
   color: var(--color-000);
   font-weight: 500;
@@ -61,8 +66,8 @@ a {
   --text-font-style: normal;
   --color-000: rgb(161, 161, 161);
   --color-001: whitesmoke;
-  --color-002: #2C3E50;
-  --color-003: #4b8181;
+  --color-002: rgb(24, 221, 96);
+  --color-003: rgba(59, 131, 246, 0.822);
   --color-004: #A8C0A0;
   --color-005: rgb(206, 206, 206);
   --color-black: black;

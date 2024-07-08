@@ -1,8 +1,8 @@
 import React, { useContext, useState, useMemo, useEffect, useRef } from "react";
 import "./styles/Header.scss";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowLeft, faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
+import { faArrowLeft, faBars, faXmark, faGear, faRightFromBracket, faUser } from "@fortawesome/free-solid-svg-icons";
 import { HeaderUnit, Navigation } from "./component/headerUnit";
 import { LanguageUnit } from "./component/languageUnit";
 import translations from '../utils/translations';
@@ -13,7 +13,11 @@ const img = ['img/Italy.svg', 'img/England.svg', 'img/Russia.svg', 'img/Ukraine.
 const Header = ({ hideNavigation, noJustify, hideBars }) => {
   const [navigationVisible, setNavigationVisible] = useState(false);
   const [languageMenuVisible, setLanguageMenuVisible] = useState(false);
-  const { language, user } = useContext(ActiveContext);
+  const { language, user, logout } = useContext(ActiveContext); 
+  const [isPanelVisible, setIsPanelVisible] = useState(false);
+  const userPanelRef = useRef(null);
+
+  const navigate = useNavigate(); 
 
   const translation = useMemo(() => translations[language], [language]);
 
@@ -50,6 +54,18 @@ const Header = ({ hideNavigation, noJustify, hideBars }) => {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
+  const toggleDisplay = () => {
+    setIsPanelVisible((prevVisible) => !prevVisible);
+    if (userPanelRef.current) {
+      userPanelRef.current.style.display = isPanelVisible ? 'none' : 'flex';
+    }
+  };
+
+  const handleLogout = () => {
+    logout(); 
+    navigate('/home'); 
+  };
+
   return (
     <header>
       <div className={`container ${noJustify ? 'no-justify-space-evenly' : ''}`}>
@@ -85,9 +101,23 @@ const Header = ({ hideNavigation, noJustify, hideBars }) => {
       </div>
       <div className="right-container">
         {user ? (
-          <div className="user-info">
-            <img src={`https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}.png`} alt={`Аватар пользователя ${user.username}`} />
-            <h3>{user.username}</h3>
+           <div className="user-info">
+           <img onClick={toggleDisplay} src={`https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}.png`} alt="" />
+           <div className="user-panel" ref={userPanelRef}>
+             <div className="user-info">
+               <img src={`https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}.png`} alt="" />
+               <h3>{user.username}</h3>
+             </div>
+              <div className="user-container">
+                <Link to="/profile">
+                  <span> <FontAwesomeIcon icon={faUser} /> Profile</span>
+                </Link>
+                <Link to="/profile">
+                <span> <FontAwesomeIcon icon={faGear} /> Settings </span>
+                </Link>
+                <span onClick={handleLogout}> <FontAwesomeIcon icon={faRightFromBracket} /> Logout </span>
+              </div>
+            </div>
           </div>
         ) : (
           <Link to='/register'>

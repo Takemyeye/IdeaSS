@@ -1,0 +1,197 @@
+@import "../../../main.scss";
+
+.wrapper {
+  @include font-text;
+  @include flex (column, center, center);
+  position: relative;
+  width: 100%;
+  padding: 20px 0;
+  gap: 2rem;
+}
+
+.profile-container {
+  @include flex (column, center, start);
+  width: 80%;
+  border-radius: 12px;
+  border: 1px var(--color-000) solid;
+  padding: 2rem;
+  background-color: transparent;
+  gap: 3rem;
+
+  .profile-title {
+    @include flex (column, center, start);
+    gap: 8px;
+  }
+}
+
+.data-container {
+  @include flex (row);
+  gap: 2rem;
+  width: 100%;
+}
+
+.data-user {
+  @include flex (column, center, start); 
+  gap: 8px;
+  width: 100%;
+
+  span {
+    width: 95%;
+    color: var(--color-black);
+    font-size: clamp(14px, 2vw, 18px);
+    background-color: var(--color-001);
+    border-radius: 6px;
+    padding: 4px;
+  }
+}
+
+.userAvatar {
+  @include flex (column, center, start);
+  width: 90%;
+  gap: 8px;
+
+  h3 {
+    color: var(--color-001);
+  }
+  img {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+  }
+}
+
+.notification-container {
+  @include flex;
+  width: 100%;
+  gap: 1rem;
+}
+
+.notification {
+  @include flex (row, space-between);
+  width: 100%;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: var(--color-002);
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.switch[data-state="unchecked"] .slider {
+  background-color: var(--color-000);
+}
+
+.coment-container {
+  @include flex(column, center, start);
+  width: 100%;
+  overflow: hidden;
+  gap: 8px;
+}
+
+.textarea {
+  max-width: 98%;
+  min-width: 98%;
+  max-height: 8rem;
+  min-height: 8rem;
+  padding: 1%;
+  border-radius: 6px;
+  border: 1px solid var(--color-000);  
+  font-size: 1rem;  
+  background-color: #f9f9f9;  
+  transition: border-color 0.3s ease;
+}
+
+.textarea:focus {
+  border-color: var(--color-black);  
+  outline: none; 
+}
+
+.submit-button {
+  background-color: var(--color-001); 
+  color: var(--color-black); 
+  border: none; 
+  border-radius: 6px;
+  padding: 10px 20px; 
+  font-size: 1rem; 
+  cursor: pointer; 
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;  /* Плавные переходы для фона и тени */
+}
+
+.submit-button:hover {
+  background-color: var(--color-000); 
+}
+
+
+.submit-button:disabled {
+  background-color: var(--color-000);  
+  cursor: not-allowed;  
+}
+
+@media all and (max-width: 425px) {
+
+  .profile-container {
+    width: 70%;
+  }
+  .data-container {
+    flex-direction: column;
+  }
+  .data-user {
+    span {
+      width: 95%;
+    }
+  }
+  .avatar {
+    img {
+      width: 42px;
+      height: 42px;
+    }
+  }
+
+  .notification {
+    h3 {
+     max-width: 150px;
+    }
+  }
+
+}

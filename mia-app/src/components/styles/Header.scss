@@ -1,25 +1,20 @@
 @import '../../main.scss';
 
 header {
+  @include font-text;
+  @include flex (row, space-between);
   top: 0;
   width: 100%;
   min-height: 10vh;
   background-color: black;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: row;
-  @include font-text;
   font-weight: bold;
   font-size: 15px;
 }
 
 .container {
-  min-width: 85%;
+  @include flex (row, start, center);
+  min-width: 75%;
   height: auto;
-  display: flex;
-  align-items: center;
-  flex-direction: row;
   transition: 0.5s ease-in-out;
 }
 
@@ -28,11 +23,8 @@ header {
 }
 
 .logo-title {
+  @include flex (row);
   min-width: 170px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
   gap: 15px;
 }
 
@@ -52,11 +44,8 @@ header {
 }
 
 .navigation {
+  @include flex (row);
   width: 70%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
   gap: 2rem;
 }
 
@@ -127,22 +116,57 @@ header {
 }
 
 .user-info {
+  @include flex (row);
   width: 100%;
-  min-width: 200px;
   height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
   gap: 1rem;
 
     img {
       width: 38px;
       height: 38px;
       border-radius: 50%;
+      cursor: pointer;
     }
     h3 {
       color: var(--color-001);
+    }
+}
+
+.user-panel {
+  @include flex (column, center, start);
+  display: none;
+  position: absolute;
+  top: 50px;
+  right: 1rem;
+  padding: 1rem 2rem;
+  background-color: var(--color-black);
+  border-radius: 12px;
+  box-shadow: 0 0 10px var(--color-000);
+  z-index: 2;
+  gap: 1.3rem;
+  animation: bottom 1s ease-in-out forwards;
+  
+        .user-info {
+          padding-bottom: 6px;
+          border-bottom: 1px var(--color-001) solid;
+        }
+
+        .user-container {
+          @include flex (column, center, start);
+          gap: 8px;
+
+        span {
+          @include flex (row);
+          font-size: 16px;
+          color: var(--color-000);
+          gap: 12px;
+          cursor: pointer;
+          transition: 0.5s ease-out;
+        }
+
+        span:hover {
+          color: var(--color-001);
+        }
     }
 }
 
@@ -210,6 +234,35 @@ header {
 
 @media all and (min-width: 501px ) and ( max-width: 768px ) {
 
+  .user-info {
+    h3 {
+      display: none;
+    }
+    .user-panel {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      align-items: center;
+      background-color: transparent;
+      backdrop-filter: blur(20px);
+      animation: none;
+      
+      .user-container {
+        gap: 2rem;
+
+        span {
+          font-size: 18px;
+        }
+      }
+      .user-info {
+        display: none;
+      }
+  }
+
+  }
+
   .title {
     display: none;
   }
@@ -253,6 +306,34 @@ header {
 
 @media all and ( max-width: 500px ) { 
   
+  .user-info {
+    h3 {
+      display: none;
+    }
+    .user-panel {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      align-items: center;
+      background-color: transparent;
+      backdrop-filter: blur(20px);
+      animation: none;
+      
+      .user-container {
+        gap: 2rem;
+
+        span {
+          font-size: 18px;
+        }
+      }
+      .user-info {
+        display: none;
+      }
+    }
+  }
+
   .container {
     min-width: 70%;
   }

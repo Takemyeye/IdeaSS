@@ -30,6 +30,11 @@ export const ActiveProvider = ({ children }) => {
     setUser(null);
   };
 
+  const logout = () => {
+    clearUser();
+    localStorage.removeItem('token');
+  };
+
   return (
     <ActiveContext.Provider
       value={{
@@ -37,7 +42,7 @@ export const ActiveProvider = ({ children }) => {
         handleLanguageChange,
         user,
         updateUser,
-        clearUser,
+        logout, 
       }}
     >
       {children}
