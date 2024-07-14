@@ -5,7 +5,7 @@ const Client = require('discord-oauth2-api');
 const x = new Client({
   clientID: process.env.REACT_APP_DISCORD_CLIENT_ID,
   clientSecret: process.env.REACT_APP_DISCORD_CLIENT_SECRET,
-  scopes: process.env.REACT_APP_DISCORD_SCOPES.split(','),
+  scopes: ['guilds', 'email', 'identify'],
   redirectURI: process.env.REACT_APP_DISCORD_REDIRECT_URI,
 });
 
