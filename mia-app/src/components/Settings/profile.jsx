@@ -5,6 +5,8 @@ import ProfileData from "./profileData";
 import NotificationBlock from "./notificationBlock";
 import Coment from "./coment";
 
+const video = "video/profile-video.mp4";
+
 export function Profile() {
 
 
@@ -12,6 +14,16 @@ export function Profile() {
     <>
       <Header />
       <div className="wrapper">
+      <div className="profile-video">
+          <video 
+            src={video}
+            autoPlay
+            loop
+            muted
+            playsInline
+            preload="auto">
+          </video>
+        </div>
         <ProfileData/>
         <NotificationBlock/>
         <Coment/>

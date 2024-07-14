@@ -13,10 +13,11 @@
   @include flex (column, center, start);
   width: 80%;
   border-radius: 12px;
-  border: 1px var(--color-000) solid;
   padding: 2rem;
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0.836);
+  box-shadow: 0 0 5px var(--color-000);
   gap: 3rem;
+  z-index: 2;
 
   .profile-title {
     @include flex (column, center, start);
@@ -166,6 +167,21 @@ input:checked + .slider:before {
 .submit-button:disabled {
   background-color: var(--color-000);  
   cursor: not-allowed;  
+}
+
+.profile-video {
+  position: fixed;
+  width: 100%;
+  height: 90vh;
+  left: 0;
+  bottom: 0;
+    video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: blur(6px);
+      opacity: 0.3;
+    }
 }
 
 @media all and (max-width: 425px) {
