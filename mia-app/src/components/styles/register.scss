@@ -2,13 +2,12 @@
 
 .container-register {
   @include flex (column);
+  @include size (250px, auto, 1rem);
   position: relative;
-  width: 250px;
   padding: 20px;
   border-radius: 10px;
   color: var(--color-001);
   text-align: center;
-  gap: 1rem;
 
   h1 {
     font-size: clamp(15px, 3vw, 25px);
@@ -17,26 +16,25 @@
 }
 
 .auth {
+  @include size (100%, auto, 8px);
   @include flex (column);
   position: relative;
-  width: 100%;
-  gap: 8px;
+
 }
 
 .login {
   position: relative;
-  width: 250px;
+  @include size (250px);
   padding: 12px 8px;
   border-radius: 12px;
   box-shadow: 0 0 2px var(--color-001);
 
   .lock {
-    position: absolute;
+    @include size (100%, 100%);
     @include flex;
+    position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
     border-radius: 12px;
     background-color: rgba(0, 0, 0, 0.699);
   }

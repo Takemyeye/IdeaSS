@@ -24,6 +24,8 @@
   justify-content: center;
 }
 
-@mixin img-position($url,$size:contain) {
-  background: url($url) center / size no-repeat;
+@mixin size ($wigth:auto, $height:auto, $gap:0){
+  width: $wigth;
+  height: $height;
+  gap: $gap;
 }
