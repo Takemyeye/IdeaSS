@@ -3,41 +3,38 @@
 .wrapper {
   @include font-text;
   @include flex (column, center, center);
+  @include size (100%, auto, 2rem);
   position: relative;
-  width: 100%;
   padding: 20px 0;
-  gap: 2rem;
 }
 
 .profile-container {
   @include flex (column, center, start);
-  width: 80%;
+  @include size (80%, auto, 3rem);
   border-radius: 12px;
   padding: 2rem;
   background-color: rgba(0, 0, 0, 0.836);
   box-shadow: 0 0 5px var(--color-000);
-  gap: 3rem;
   z-index: 2;
 
   .profile-title {
     @include flex (column, center, start);
-    gap: 8px;
+    @include size (auto, auto, 8px);
   }
 }
 
 .data-container {
   @include flex (row);
-  gap: 2rem;
-  width: 100%;
+  @include size (100%, auto, 2rem);
 }
 
 .data-user {
   @include flex (column, center, start); 
-  gap: 8px;
-  width: 100%;
+  @include size (100%, auto, 8px);
+
 
   span {
-    width: 95%;
+    @include size (95%);
     color: var(--color-black);
     font-size: clamp(14px, 2vw, 18px);
     background-color: var(--color-001);
@@ -48,35 +45,33 @@
 
 .userAvatar {
   @include flex (column, center, start);
-  width: 90%;
-  gap: 8px;
+  @include size (90%, auto, 8px);
+
 
   h3 {
     color: var(--color-001);
   }
   img {
-    width: 64px;
-    height: 64px;
+    @include size (64px, 64px);
     border-radius: 50%;
   }
 }
 
 .notification-container {
   @include flex;
-  width: 100%;
-  gap: 1rem;
+  @include size (100%, auto, 1rem);
+
 }
 
 .notification {
   @include flex (row, space-between);
-  width: 100%;
+  @include size (100%);
 }
 
 .switch {
+  @include size (60px, 36px);
   position: relative;
   display: inline-block;
-  width: 60px;
-  height: 34px;
   border-radius: 20px;
   overflow: hidden;
 }
@@ -100,10 +95,10 @@
 }
 
 .slider:before {
+  @include size (26px, 26px);
   position: absolute;
   content: "";
-  height: 26px;
-  width: 26px;
+
   left: 4px;
   bottom: 4px;
   background-color: white;
@@ -125,9 +120,8 @@ input:checked + .slider:before {
 
 .coment-container {
   @include flex(column, center, start);
-  width: 100%;
+  @include size (100%, auto, 8px);
   overflow: hidden;
-  gap: 8px;
 }
 
 .textarea {
@@ -170,14 +164,12 @@ input:checked + .slider:before {
 }
 
 .profile-video {
+  @include size (100%, 90vh);
   position: fixed;
-  width: 100%;
-  height: 90vh;
   left: 0;
   bottom: 0;
     video {
-      width: 100%;
-      height: 100%;
+      @include size (100%, 100%);
       object-fit: cover;
       filter: blur(6px);
       opacity: 0.3;
@@ -199,8 +191,7 @@ input:checked + .slider:before {
   }
   .avatar {
     img {
-      width: 42px;
-      height: 42px;
+      @include size (42px, 42px);
     }
   }
 

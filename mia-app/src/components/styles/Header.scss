@@ -1,10 +1,10 @@
 @import '../../main.scss';
 
 header {
-  @include font-text;
   @include flex (row, space-between);
+  @include font-text;
+  @include size (100%);
   top: 0;
-  width: 100%;
   min-height: 10vh;
   background-color: black;
   font-weight: bold;
@@ -29,8 +29,7 @@ header {
 }
 
 .logo {
-  width: 70px;
-  height: 70px;
+  @include size (70px, 70px);
   background-image: url(img/logo.png);
   background-position: center;
   background-size: contain;
@@ -45,8 +44,7 @@ header {
 
 .navigation {
   @include flex (row);
-  width: 70%;
-  gap: 2rem;
+  @include size (70%, auto, 2rem);
 }
 
 .back {
@@ -57,6 +55,7 @@ header {
 }
 
 .left-container {
+  @include size (auto,auto,8px);
   color: var(--color-000);
   position: relative;
   overflow: hidden;
@@ -64,7 +63,6 @@ header {
   padding: 2px 0;
   display: flex;
   flex-direction: row;
-  gap: 8px;
   cursor: pointer;
   transition: color 0.3s ease;
 
@@ -98,7 +96,7 @@ header {
 }
 
 .right-container {
-  width: 15%;
+  @include size (15%);
   position: relative;
   display: flex;
   align-items: center;
@@ -117,13 +115,10 @@ header {
 
 .user-info {
   @include flex (row);
-  width: 100%;
-  height: 40px;
-  gap: 1rem;
+  @include size (100%, 40px, 1rem);
 
     img {
-      width: 38px;
-      height: 38px;
+      @include size (38px, 38px);
       border-radius: 50%;
       cursor: pointer;
     }
@@ -171,14 +166,13 @@ header {
 }
 
 .changeLanguage {
+  @include size (100%, 100vh);
   position: fixed;
   top: 0; 
   left: 0;
   display: none;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  height: 100vh;
   backdrop-filter: blur(4px);
   z-index: 1000;
   opacity: 0;
@@ -192,22 +186,20 @@ header {
 }
 
 .language-container {
-  width: 400px;
+  @include size (400px, auto, 1rem);
   display: flex;
   align-items: center;
   justify-content: start;
   flex-direction: column;
-  gap: 16px;
   background-color: var(--color-black);
   padding: 16px 14px;
   border-radius: 12px;
   animation: bottom 1s ease-in-out forwards;
 
    span {
-    width: 100%;
+    @include size (100%, 8rem);
     display: flex;
     flex-direction: row;
-    gap: 8rem;
     font-size: 25px;
     font-weight: 500;
    }
@@ -217,7 +209,7 @@ header {
 }
 
 .language-block {
-  width: 100%;
+  @include size (100%);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -227,8 +219,8 @@ header {
   cursor: pointer;
 
     img {
-      width: 32px;
-      height: 25px;
+      @include size (2rem, 25px);
+
     }
 }
 
@@ -239,11 +231,10 @@ header {
       display: none;
     }
     .user-panel {
+      @include size (100%, 100%);
       position: fixed;
       top: 0;
       left: 0;
-      width: 100%;
-      height: 100%;
       align-items: center;
       background-color: transparent;
       backdrop-filter: blur(20px);
@@ -276,12 +267,11 @@ header {
   }
 
   .navigation {
+    @include size (100%, 100%);
     display: none;
     position: fixed;
     left: 0;
     top: 0;
-    width: 100%;
-    height: 100%;
     backdrop-filter: blur(20px);
     z-index: 2;
     flex-direction: column;
@@ -311,11 +301,10 @@ header {
       display: none;
     }
     .user-panel {
+      @include size (100%, 100%);
       position: fixed;
       top: 0;
       left: 0;
-      width: 100%;
-      height: 100%;
       align-items: center;
       background-color: transparent;
       backdrop-filter: blur(20px);
@@ -339,7 +328,7 @@ header {
   }
 
   .right-container {
-    width: 30%;
+    @include size (30%);
     font-size: 15px;
   }
 
@@ -348,12 +337,11 @@ header {
   }
 
   .navigation {
+    @include size (100%, 100%, 1rem);
     display: none;
     position: fixed;
     left: 0;
     top: 0;
-    width: 100%;
-    height: 100%;
     backdrop-filter: blur(20px);
     z-index: 2;
     flex-direction: column;

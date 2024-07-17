@@ -3,40 +3,32 @@
 .main {
   @include font-text;
   @include flex (row);
+  @include size (100%, auto, 26px);
   position: relative;
-  width: 100%;
-  height: auto;
   background-color: black;
-  gap: 26px;
   overflow: hidden;
 }
 
 .about-container {
-  width: 100%;
-  height: 100%;
+  @include size (100%,100%);
 }
 
 .leftPanel  {
   @include flex (column);
-  width: 55%;
-  height: 100%;
+  @include size(55%, 100%, 26px);
   color: var(--color-000);
-  gap: 26px;
 }
 
 .belance-background {
-  width: 100%;
-  height: 400px;
+  @include size (100%, 400px);
   text-align: center;
   z-index: 1;
 }
 
 .belance {
   @include flex (row,space-evenly,center);
+  @include size (100%, 100%, 10px);
   position: relative;
-  width: 100%;
-  height: 100%;
-  gap: 10px;
 
   .belance-container:nth-child(2) {
     overflow: hidden;
@@ -45,46 +37,26 @@
 
 .home-title {
   @include flex (row,start);
+  @include size (auto, auto, 8px);
   color: var(--color-001);
   font-size: 35px;
-  gap: 8px;
 }
 
 .home-logo {
-  width: 30px;
-  height: 30px;
-}
-
-.belance-container:nth-child(1) .home-logo {
-  @include img-position('img/logo.png');
-}
-
-.belance-container:nth-child(2) .home-logo {
-  @include img-position('img/abaut-logo.png');
-}
-
-.developers .home-title .home-logo {
-  @include img-position('img/dev-logo.png');
-}
-
-.img-overlay .home-title .home-logo {
-  @include img-position('img/work-logo.png');
+ @include size (30px, 30px);
 }
 
 .belance-container {
   @include flex (column,space-evenly,start);
-  width: 45%;
-  height: 95%;
+  @include size (45%, 95%);
   animation: bottom 2s ease-in-out forwards;
 }
 
 .information {
   @include flex (column,center,center);
-  width: 100%;
-  height: 100%;
+  @include size (100%, 100%, 8px);
   background-color: rgba(0, 0, 0, 0.445);
   border-radius: 16px;
-  gap: 8px;
   font-size: 13px;
 }
 
@@ -94,18 +66,17 @@
 }
 
 .services {
+  @include size (90%, auto, 8px);
   display: flex;
   flex-direction: column;
-  width: 90%;
   font-size: 25px;
   color: var(--color-001);
-  gap: 8px;
 }
 
 .skills-container {
+  @include size (auto, auto, 6px);
   display: flex;
   flex-direction: column;
-  gap: 6px;
 }
 
 .skills {
@@ -116,9 +87,8 @@
 }
 
 .ui {
+  @include size (30px, 30px);
   position: relative;
-  width: 30px;
-  height: 30px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -136,9 +106,7 @@
 
 .about {
   @include flex (column, space-evenly, center);
-  width: 90%;
-  height: 100%;
-  gap: 8px;
+  @include size (90%, 100%, 8px);
 }
 
 .more {
@@ -152,33 +120,28 @@
 
 .description-container {
   @include flex (row);
+  @include size (100%, 300px, 26px);
   position: relative;
-  width: 100%;
-  height: 300px;
-  gap: 26px;
   animation: bottom 2s ease-in-out forwards;
 }
 
 .description-background {
   position: relative;
-  width: 100%;
-  height: 100%;
+  @include size (100%, 100%);
   border-radius: 20px 70px 20px 20px;
   overflow: hidden;
 }
 
 .description-background video {
-  width: 100%;
-  height: 100%;
+  @include size (100%, 100%);
   object-fit: cover;
 }
 
 .background {
+  @include size (100%, 100%);
   position: absolute;
   left: 0;
   top: 0;
-  width: 100%;
-  height: 100%;
   background-color: rgba(0, 0, 0, 0.719);
 }
 
@@ -186,27 +149,24 @@
 
 .rightPanel {
   @include flex (column);
-  width: 30%;
-  height: auto;
-  gap: 26px;
+  @include size (30%, auto, 26px);
+
 }
 
 .developers-background {
+  @include size (100%, 400px);
   position: relative;
-  width: 100%;
-  height: 400px;
   z-index: 1;
   overflow: hidden;
   animation: bottom 2s ease-in-out forwards;
 }
 
 .hover-info {
+  @include size (100%, 100%);
   display: none;
   position: absolute;
   left: 0;
   top: 0;
-  width: 100%;
-  height: 100%;
   backdrop-filter: blur(6px);
   background-color: rgba(0, 0, 0, 0.719);
 }
@@ -217,8 +177,7 @@
 }
 
 .developers-information {
-  width: 100%;
-  height: 100%;
+  @include size (100%, 100%, 8px);
   color: var(--color-001);
   display: flex;
   align-items: center;
@@ -233,25 +192,21 @@
 }
 
 .classification {
+  @include size (90%, 15%, 8px);
   display: flex;
   align-items: center;
   font-size: 15px;
-  width: 90%;
-  height: 15%;
   color: var(--color-000);
   background-color: rgba(0, 0, 0, 0.719);
   border-radius: 20px;
-  gap: 8px;
 }
 
 .developers {  
   @include flex (column);
-  width: 100%;
-  height: 100%;
+  @include size (100%, 100%, 8px);
   background-color: rgba(0, 0, 0, 0.87);
   border-radius: 20px 20px 20px 70px;
   color: var(--color-001);
-  gap: 8px;
 }
 
 .info {
@@ -267,21 +222,18 @@
 
 .developers-container {
   @include flex (column, start, center);
-  width: 95%;
-  height: 80%;
-  gap: 8px;
+  @include size (95%, 80%, 8px);
 }
 
 .developer {
   @include flex (row, space-between, center);
+  @include size (90%, 15%);
   padding: 5px 10px 5px 10px;
-  width: 90%;
-  height: 15%;
+
 }
 
 .avatar {
   @include flex (content);
-
   font-size: 30px;
 }
 
@@ -320,34 +272,30 @@
 }
 
 .works-scroll-background {
+  @include size (100%, 300px);
   position: relative;
-  width: 100%;
-  height: 300px;
   border-radius: 80px 20px 20px 20px;
   overflow: hidden;
 }
 .works-scroll {
+  @include size (100%, 100%);
   position: relative;
-  width: 100%;
-  height: 100%;
   border-radius: 80px 20px 20px 20px;
   overflow: hidden;
 }
 
 .img {
-  width: 100%;
-  height: 100%;
+  @include size (100%, 100%);
   animation: scroll 5s ease-in-out infinite;
 }
 
 .img-overlay {
   @include flex (column, space-evenly, center);
+  @include size (100%, 100%);
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
   max-width: 600px;
-  height: 100%;
   background-color: rgba(0, 0, 0, 0.445);
   backdrop-filter: blur(4px);
   animation: bottom 2s ease-in-out forwards;
@@ -365,13 +313,11 @@
 
   .belance-background{
     border-radius: 20px;
-    width: 70%;
-    height: 500px;
+    @include size (70%, 500px);
   }
 
   .rightPanel {
-    width: 90%;
-    height: 850px;
+    @include size (90%, 850px);
     justify-content: space-evenly;
   }
 
@@ -413,9 +359,7 @@
 
   .belance-background{
     border-radius: 20px;
-    width: 90%;
-    height: 1000px;
-    height: auto;
+    @include size (90%, 1000px);
   }
 
   .information {
@@ -447,8 +391,7 @@
 
 
   .rightPanel {
-    width: 90%;
-    height: 850px;
+    @include size (90%, 850px);
     justify-content: space-evenly;
   }
 
