@@ -197,7 +197,7 @@ header {
   animation: bottom 1s ease-in-out forwards;
 
    span {
-    @include size (100%, 8rem);
+    @include size (100%, auto ,8rem);
     display: flex;
     flex-direction: row;
     font-size: 25px;
@@ -267,7 +267,7 @@ header {
   }
 
   .navigation {
-    @include size (100%, 100%);
+    @include size (100%, 100%, 1rem);
     display: none;
     position: fixed;
     left: 0;

@@ -7,7 +7,7 @@ export function LanguageUnit ({img, text, language}){
   return (
     <div className="language-block" onClick={() => handleLanguageChange(language)}>
       {text}
-      <img src={img} alt="Italian flag" /> 
+      <img src={img} alt="Inter Pointer" /> 
     </div>
   )
 }

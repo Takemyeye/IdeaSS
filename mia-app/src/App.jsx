@@ -7,8 +7,7 @@ import About from './components/component/pages/About';
 import Works from './components/component/pages/Works';
 import { Profile } from './components/Settings/profile';
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
-import { ActiveProvider } from './components/ActiveContext';
-import ActiveContext from './components/ActiveContext';
+import ActiveContext, { ActiveProvider } from './components/ActiveContext';
 import { Register } from './private/register';
 
 const ProtectedRoute = ({ element: Element }) => {
