@@ -45,6 +45,7 @@ header {
 .navigation {
   @include flex (row);
   @include size (70%, auto, 2rem);
+  z-index: 4;
 }
 
 .back {

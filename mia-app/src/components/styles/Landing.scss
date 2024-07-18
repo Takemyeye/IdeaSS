@@ -40,9 +40,9 @@
 
 .landing-start {
   @include size (30%, 100%, 24px);
+  @include flex;
   position: relative;
   background-color: var(--color-black);
-  @include flex;
   text-align: center;
   animation: fromRight 1.5s ease-in-out forwards;
 
@@ -79,11 +79,11 @@
   }
 
   .video-overlay {
-    @include size (100%,90vh);
+    @include size (100%, 90vh);
   }
 
   .video-overlay--top  {
-    @include size (100%,90vh);
+    @include size (100%, 90vh);
     display: block;
   }
 
