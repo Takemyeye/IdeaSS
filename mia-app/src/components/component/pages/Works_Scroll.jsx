@@ -13,6 +13,8 @@ const RightPanelBottom = () => {
       'img/SS-Portfolio.png',
       'img/impactium.jpg',
       'img/Sushi-Italia.jpg',
+      'img/compress.png',
+      'img/DolceVita.png',
     ],
     []
   );
@@ -42,7 +44,7 @@ const RightPanelBottom = () => {
         <div className="img">
           <img
             src={images[currentImageIndex]}
-            alt={`img ${currentImageIndex + 1}`}
+            alt={`inter Pointer`}
             style={{
               objectFit: "contain",
               width: "100%",
