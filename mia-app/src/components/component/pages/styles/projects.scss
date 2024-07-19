@@ -2,12 +2,10 @@
 
 .proud-container {
   @include size (100%, auto, 3rem);
+  @include font-text;
   @include flex;
+  padding-bottom: 2rem;
   position: relative;
-  font-family: var(--text-font-family);
-  font-optical-sizing: var(--text-font-optical-sizing);
-  font-weight: var(--text-font-weight);
-  font-style: var(--text-font-style);
   color: var(--color-001);
 }
 
@@ -19,14 +17,16 @@
 }
 
 .projects-container {
-  @include size (100%, auto, 2rem);
-  @include flex(row,center);
+  @include size (90%, auto, 2rem);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, auto);
   position: relative;
   animation: bottom 2s forwards;
 }
 
 .projects {
-  @include size (23%, 40vh, 1rem);
+  @include size (100%, 40vh, 1rem);
   @include flex(column,start);
   @include font(none);
   position: relative;
@@ -66,11 +66,11 @@
 
 @media all and ( max-width: 1024px ) {
   .projects-container {
-    flex-direction: column;
-    padding: 2rem 0;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, auto);
 
     .projects {
-      @include size (50%);
+      @include size (100%);
     }
   }
 }
@@ -78,10 +78,17 @@
 @media all and ( max-width: 768px ) {
 
   .title-container {
-    @include size (80%);
+    @include size (70%, auto, 1rem);
   }
 
   .projects {
-    width: 80% !important;
+    width: 100%;
+  }
+}
+
+@media all and ( max-width: 500px ) {
+    .projects-container {
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: repeat(7, auto);
   }
 }
