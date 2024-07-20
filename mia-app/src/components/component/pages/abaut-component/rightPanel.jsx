@@ -17,28 +17,28 @@ const translation = useMemo(() => translations[language], [language]);
         <div className="values-container">
           <FontAwesomeIcon icon={faCheck} />
           <div className="text-container">
-            <span>{translation.ourValuesCommitment}</span>
-            <span>{translation.ourValuesCommitmentText}</span>
+            <h3>{translation.ourValuesCommitment}</h3>
+            <h3>{translation.ourValuesCommitmentText}</h3>
           </div>
         </div>
         <div className="values-container">
           <FontAwesomeIcon icon={faCheck} />
           <div className="text-container">
-            <span>{translation.ourValuesCollaboration}</span>
-            <span>{translation.ourValuesCollaborationText}</span>
+            <h3>{translation.ourValuesCollaboration}</h3>
+            <h3>{translation.ourValuesCollaborationText}</h3>
           </div>
         </div>
         <div className="values-container">
           <FontAwesomeIcon icon={faCheck} />
           <div className="text-container">
-            <span>{translation.ourValuesInnovation}</span>
-            <span>{translation.ourValuesInnovationText}</span>
+            <h3>{translation.ourValuesInnovation}</h3>
+            <h3>{translation.ourValuesInnovationText}</h3>
           </div>
         </div>
       </div>
       <div className="about-text-container">
         <h1>{translation.ourMissionTitle}</h1>
-        <span>{translation.ourMissionText}</span>
+        <h3>{translation.ourMissionText}</h3>
       </div>
     </div>
   )

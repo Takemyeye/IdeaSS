@@ -14,12 +14,9 @@
 
 .container-left,
 .container-right {
-  position: relative;
-  top: 3rem;
-  width: 45%;
-  display: flex;
-  flex-direction: column;
-  gap: 4rem;
+  @include flex (column);
+  @include size (45%, auto, 4rem);
+  @include position (relative, 0, 3rem);
   z-index: 1;
 }
 
@@ -29,37 +26,24 @@
 }
 
 .container-right {
-  align-items: end;
-  justify-content: start;
+  @include flex (column, start, end);
   animation: bottom 2s forwards;
 }
 
 .about-text-container,
 .information-container {
+  @include flex (column, start, start);
   position: relative;
-  font-weight: 600;
-  display: flex;
-  justify-content: start;
-  flex-direction: column;
   gap: 26px;
 }
 
 .about-text-container {
-  width: 75%;
-  height: 40vh;
-}
-
-.about-text-container span:nth-child(2) {
-  color: var(--color-000);
-  font-size: clamp(12px, 2vw, 16px);
-  font-weight: 500;
+  @include size (75%, 40vh, 26px);
 }
 
 .information-container {
   width: 88%;
   min-height: 55vh;
-  color: var(--color-001);
-  font-size: clamp(20px, 2vw, 40px);
 
   .about-text-container {
     width: 40%;
@@ -71,8 +55,6 @@
 .clients-container {
   display: flex;
   justify-content: start;
-  font-weight: 400;
-
   gap: 8px;
 }
 
@@ -83,55 +65,34 @@
 }
 
 .clients-container {
+  @include flex (row, start, start);
   font-size: 13px;
   color: var(--color-000);
-  display: flex;
-  align-items: start;
-  flex-direction: row;
 }
 
 .text-container {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+  @include flex (column, center, start);
   color: var(--color-000);
 }
 
-.text-container span:nth-child(1) {
-  color: var(--color-005);
-}
-
 .bubna {
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
+  @include flex (row, center, start);
   gap: 5rem;
 }
 
 .coments {
+  @include flex (column, start, start);
   width: 30%;
-  display: flex;
-  flex-direction: column;
   gap: 8px;
 }
 
 .clients {
-  display: flex;
-  flex-direction: column;
-  font-size: 15px;
-  font-weight: 600;
+  @include flex (column, start, start);
   gap: 8px;
 }
 
-.clients span:nth-child(2) {
-  color: var(--color-000);
-  font-weight: 500;
-}
-
 .quoteRight {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flex (column, center, center);
   color: var(--color-black);
   font-size: 30px;
   padding: 5px;
@@ -140,15 +101,8 @@
 }
 
 .contact-us {
-  position: absolute;
-  right: -100%;
-  top: 15%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 20px;
-  font-weight: 500;
-  color: var(--color-001);
+  @include position (absolute, auto, 15%, -100%);
+  @include flex (column, center, center);
   border: 2px whitesmoke solid;
   border-radius: 10px;
   padding: 4px 10px;
@@ -217,8 +171,6 @@
   }
 
   .contact-us {
-    width: 80px;
-    height: 25px;
-    font-size: clamp(12px, 2vw, 15px);
+    @include size (80px, 25px);
   }
 }

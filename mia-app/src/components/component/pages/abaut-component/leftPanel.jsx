@@ -13,11 +13,11 @@ const translation = useMemo(() => translations[language], [language]);
     <div className="container-left">
       <div className="about-text-container">
         <h1> {translation.aboutUsTitle} </h1>
-        <span> {translation.aboutUsDescription} </span>
+        <h3> {translation.aboutUsDescription} </h3>
       </div>
       <div className="about-text-container">
         <h1> {translation.ourHistoryTitle} </h1>
-        <span> {translation.ourHistoryText} </span>
+        <h3> {translation.ourHistoryText} </h3>
       </div>
     </div>
   );

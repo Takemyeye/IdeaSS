@@ -19,12 +19,11 @@
   @include size (100%, auto, 8px);
   @include flex (column);
   position: relative;
-
 }
 
 .login {
-  position: relative;
   @include size (250px);
+  position: relative;
   padding: 12px 8px;
   border-radius: 12px;
   box-shadow: 0 0 2px var(--color-001);

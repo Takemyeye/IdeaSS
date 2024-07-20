@@ -8,11 +8,11 @@ export function ComentUnit({clientQuote, clientName, clientCompany }) {
       <div className="quoteRight">
         <FontAwesomeIcon icon={faQuoteRight}/>
       </div>
-      <span> {clientQuote} </span>
+      <h3> {clientQuote} </h3>
     </div>
     <div className="clients">
-      <span> {clientName} </span>
-      <span> {clientCompany} </span>
+      <h2> {clientName} </h2>
+      <h3> {clientCompany} </h3>
     </div>
   </div>
   );

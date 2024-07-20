@@ -44,18 +44,16 @@
       color: var(--color-000);
       font-weight: 500;
     }
-   
 }
 
 .wallpaper {
   @include size (90%, 200px);
 
-
-  img {
-    @include size (100%, 100%);
-    border-radius: 8px;
-    object-fit: contain;
-  }
+    img {
+      @include size (100%, 100%);
+      border-radius: 8px;
+      object-fit: contain;
+    }
 }
 
 .description-projects {
@@ -69,9 +67,6 @@
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(4, auto);
 
-    .projects {
-      @include size (100%);
-    }
   }
 }
 
@@ -81,9 +76,6 @@
     @include size (70%, auto, 1rem);
   }
 
-  .projects {
-    width: 100%;
-  }
 }
 
 @media all and ( max-width: 500px ) {

@@ -29,3 +29,11 @@
   height: $height;
   gap: $gap;
 }
+
+@mixin position ($position:absolute, $left:auto, $top:auto, $right:auto, $bottom:auto){
+  position: $position;
+  left: $left;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+}

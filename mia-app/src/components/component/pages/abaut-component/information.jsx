@@ -11,7 +11,7 @@ const { language } = useContext(ActiveContext);
 const translation = useMemo(() => translations[language], [language]);
   return(
     <div className="information-container">
-      <span> {translation.clientsTitle} </span>
+      <h1> {translation.clientsTitle} </h1>
       <div className="bubna">
         <ComentUnit
           clientQuote={translation.client1Quote}
@@ -28,10 +28,10 @@ const translation = useMemo(() => translations[language], [language]);
       </div>
       <div className="about-text-container">
         <h1>{translation.readyToGetStarted}</h1>
-        <span>{translation.contactUsText}</span>
+        <h3>{translation.contactUsText}</h3>
         <div className="contact-us">
           <Link to="https://mail.google.com/mail/u/0/#search/mellovan2005%40gmail.com">
-            <div className="contact">{translation.contactUsButton}</div>
+            <h2 className="contact">{translation.contactUsButton}</h2>
           </Link>
         </div>
       </div>
