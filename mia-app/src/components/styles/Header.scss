@@ -12,7 +12,7 @@ header {
 }
 
 .container {
-  @include flex (row, start, center);
+  @include flex (row, space-between, center);
   min-width: 75%;
   height: auto;
   transition: 0.5s ease-in-out;
@@ -55,22 +55,15 @@ header {
   padding: 4px 10px 4px 10px;
 }
 
-.left-container {
-  @include size (auto,auto,8px);
+.left-container, .left-container-dropBar {
+  @include flex (row);
   color: var(--color-000);
   position: relative;
-  overflow: hidden;
   font-size: clamp(12px, 1vw, 15px);
   padding: 2px 0;
-  display: flex;
-  flex-direction: row;
   cursor: pointer;
+  gap: 6px;
   transition: color 0.3s ease;
-
-    p {
-      transform: rotate(0deg);
-      transition: transform 0.3s ease;
-    }
 }
 
 .left-container:hover {
@@ -94,6 +87,23 @@ header {
 
 .left-container:hover::after {
   width: 100%;
+}
+
+.left-container-dropBar p {
+  transform: rotate(0deg);
+  transition: transform 0.3s ease;
+}
+
+.left-container-dropBar.active p {
+  transform: rotate(90deg);
+}
+
+.left-container-dropBar.active {
+  color: var(--color-001);
+}
+
+.left-container-dropBar:hover {
+  color: var(--color-001);
 }
 
 .right-container {
@@ -222,6 +232,33 @@ header {
     img {
       @include size (2rem, 25px);
 
+    }
+}
+
+.dropBar {
+  @include flex;
+  position: absolute;
+  bottom: -5rem;
+  padding: 4px;
+  border-radius: 12px;
+  background-color: var(--color-black);
+  box-shadow: 0 0 8px var(--color-000);
+  animation: drop 0.3s ease-in-out forwards;
+  gap: 6px;
+
+    .container {
+      justify-content: start;
+      width: 130px;
+      gap: 8px;
+      padding: 4px;
+      border-radius: 8px;
+      font-size: 20px;
+        h3 {
+          color: var(--color-001);
+        }
+    }
+    .container:hover {
+      background-color: rgba(172, 172, 172, 0.342);
     }
 }
 

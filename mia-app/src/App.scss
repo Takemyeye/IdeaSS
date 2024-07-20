@@ -74,6 +74,21 @@ a {
   --gradient:  linear-gradient(120deg, #2c3e50,#4b8181,#a8c0a0);
 }
 
+@keyframes drop { 
+  0% {
+    opacity: 0;
+    transform: translateY(-200px);
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
 @keyframes scroll {
   0% { 
     transform: translateX(30%);
