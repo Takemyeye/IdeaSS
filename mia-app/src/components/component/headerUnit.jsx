@@ -15,10 +15,7 @@ export function HeaderUnit({ link, text }) {
 
 export function Navigation({ text, isOpen, onClick }) {
   return (
-    <div
-      className={`left-container-dropBar ${isOpen ? 'active' : ''}`}
-      onClick={onClick}
-    >
+    <div className={`left-container-dropBar ${isOpen ? 'active' : ''}`} onClick={onClick}>
       {text}
       <p><FontAwesomeIcon icon={faArrowRight} /></p>
       {isOpen && (

@@ -11,7 +11,7 @@ export function Register () {
   const { language } = useContext(ActiveContext);
   const translation = useMemo(() => translations[language], [language]);
 
-  const GITHUB_CLIENT_ID = 'Ov23livGOC5F5BsZaTo9';
+  const GITHUB_CLIENT_ID = process.env.REACT_APP_GIT_CLIENT_ID;
   const GITHUB_REDIRECT_URI = 'http://localhost:3000/';
 
   return (

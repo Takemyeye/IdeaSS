@@ -135,14 +135,12 @@ header {
 .user-panel {
   @include position (absolute, auto, 50px, 1rem);
   @include flex (column, center, start);
+  @include dropBar;
   display: none;
   padding: 1rem 2rem;
-  background-color: var(--color-black);
-  border-radius: 12px;
-  box-shadow: 0 0 10px var(--color-000);
   z-index: 4;
   gap: 1.3rem;
-  animation: bottom 1s ease-in-out forwards;
+  transition: 0.5s ease-in-out;
   
         .user-info {
           padding-bottom: 6px;
@@ -177,7 +175,6 @@ header {
   backdrop-filter: blur(4px);
   z-index: 5;
   opacity: 0;
-  transition: opacity 0.3s ease;
   color: var(--color-001);
 }
 
@@ -189,10 +186,8 @@ header {
 .language-container {
   @include size (400px, auto, 1rem);
   @include flex (column, start, center);
-  background-color: var(--color-black);
+  @include dropBar (none);
   padding: 16px 14px;
-  border-radius: 12px;
-  animation: bottom 1s ease-in-out forwards;
 
    span {
     @include size (100%, auto ,8rem);
@@ -223,14 +218,10 @@ header {
 }
 
 .dropBar {
+  @include position (absolute, auto, auto, auto, -5rem);
+  @include dropBar;
   @include flex;
-  position: absolute;
-  bottom: -5rem;
   padding: 4px;
-  border-radius: 12px;
-  background-color: var(--color-black);
-  box-shadow: 0 0 8px var(--color-000);
-  animation: drop 0.2s ease-in-out forwards;
   gap: 6px;
 
     .container {

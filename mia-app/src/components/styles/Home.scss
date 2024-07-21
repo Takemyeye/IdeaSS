@@ -15,7 +15,7 @@
 
 .leftPanel  {
   @include flex (column);
-  @include size(55%, 100%, 26px);
+  @include size(55%, 100%, 4rem);
   color: var(--color-000);
 }
 
@@ -29,10 +29,6 @@
   @include flex (row,space-evenly,center);
   @include size (100%, 100%, 10px);
   position: relative;
-
-  .belance-container:nth-child(2) {
-    overflow: hidden;
-  }
 }
 
 .home-title {
@@ -55,14 +51,8 @@
 .information {
   @include flex (column,center,center);
   @include size (100%, 100%, 8px);
-  background-color: rgba(0, 0, 0, 0.445);
   border-radius: 16px;
   font-size: 13px;
-}
-
-.text {
-  font-size: 20px;
-  color: var(--color-001);
 }
 
 .services {
@@ -107,6 +97,9 @@
 .about {
   @include flex (column, space-evenly, center);
   @include size (90%, 100%, 8px);
+    h1 {
+      font-size: clamp(18px, 2vw, 25px);
+    }
 }
 
 .more {
@@ -147,8 +140,7 @@
 
 .rightPanel {
   @include flex (column);
-  @include size (30%, auto, 26px);
-
+  @include size (30%, auto, 4rem);
 }
 
 .developers-background {
@@ -206,9 +198,8 @@
 }
 
 .info {
+  @include position (absolute, auto, auto, 0);
   font-size: 20px;
-  position: absolute;
-  right: 0;
   background-color: var(--color-000);
   padding: 2px 10px 2px 10px;
   border-radius: 50%;
@@ -240,6 +231,7 @@
   font-weight: bold;
   text-align: center;
   cursor: pointer;
+  color: black;
 }
 
 .level-1 {
@@ -249,22 +241,18 @@
 
 .level-2 {
   background-color: #cc7777;
-  color: black;
 }
 
 .level-3 {
   background-color: #ffff66;
-  color: black;
 }
 
 .level-4 {
   background-color: #78f782; 
-  color: black;
 }
 
 .level-5 {
   background-color: #30ee30; 
-  color: black;
 }
 
 .works-scroll-background {
@@ -292,7 +280,7 @@
   top: 0;
   left: 0;
   max-width: 600px;
-  background-color: rgba(0, 0, 0, 0.445);
+  background-color: rgba(0, 0, 0, 0.555);
   backdrop-filter: blur(4px);
   animation: bottom 2s ease-in-out forwards;
 }

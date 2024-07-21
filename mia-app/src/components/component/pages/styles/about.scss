@@ -34,11 +34,11 @@
 .information-container {
   @include flex (column, start, start);
   position: relative;
-  gap: 26px;
+  gap: 2rem;
 }
 
 .about-text-container {
-  @include size (75%, 40vh, 26px);
+  @include size (75%, 30vh, 26px);
 }
 
 .information-container {
