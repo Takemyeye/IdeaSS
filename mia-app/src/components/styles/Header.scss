@@ -224,20 +224,19 @@ header {
   padding: 4px;
   gap: 6px;
 
-    .container {
-      justify-content: start;
-      width: 130px;
-      gap: 8px;
-      padding: 4px;
-      border-radius: 8px;
-      font-size: 20px;
-        h3 {
-          color: var(--color-001);
-        }
-    }
-    .container:hover {
-      background-color: rgba(172, 172, 172, 0.342);
-    }
+  .container {
+    @include size (130px, auto, 8px);
+    justify-content: start;
+    padding: 4px;
+    border-radius: 8px;
+    font-size: 20px;
+      h3 {
+        color: var(--color-001);
+      }
+  }
+  .container:hover {
+    background-color: rgba(172, 172, 172, 0.342);
+  }
 }
 
 @media all and (min-width: 501px ) and ( max-width: 768px ) {

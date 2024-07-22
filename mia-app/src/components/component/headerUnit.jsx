@@ -1,9 +1,9 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { faInstagram, faTelegram } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight} from "@fortawesome/free-solid-svg-icons";
-import { faInstagram, faTelegram } from '@fortawesome/free-brands-svg-icons';
 import { SocialUnit } from "./social/socialUnit";
+import { Link } from "react-router-dom";
 
 export function HeaderUnit({ link, text }) {
   return (
@@ -14,6 +14,7 @@ export function HeaderUnit({ link, text }) {
 }
 
 export function Navigation({ text, isOpen, onClick }) {
+  
   return (
     <div className={`left-container-dropBar ${isOpen ? 'active' : ''}`} onClick={onClick}>
       {text}
@@ -23,12 +24,12 @@ export function Navigation({ text, isOpen, onClick }) {
           <SocialUnit
           icon={faInstagram}
           text="instagram"
-          link="https://www.instagram.com/takemyeyehz/"
+          link="https://www.instagram.com/takemyeyegit/"
           />
           <SocialUnit
           icon={faTelegram}
           text="telegram"
-          link="https://t.me/takemyeye"
+          link="https://t.me/+_A-d1T6L8a02NzU0"
           />
         </div>
       )}

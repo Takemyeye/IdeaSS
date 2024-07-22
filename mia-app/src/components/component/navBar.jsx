@@ -5,9 +5,10 @@ import ActiveContext from "../ActiveContext";
 
 export function NavBar() {
   const { language } = useContext(ActiveContext);
-  const translation = useMemo(() => translations[language], [language]);
   const [openDropdown, setOpenDropdown] = useState(null);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
+  const translation = useMemo(() => translations[language], [language]);
 
   useEffect(() => {
     const handleResize = () => {
@@ -38,8 +39,8 @@ export function NavBar() {
           text={translation.social} 
           isOpen={openDropdown === 1} 
           onClick={() => handleBar(1)} 
-          telegramlink="https://t.me/takemyeye"
-          instagramlink="https://www.instagram.com/takemyeyehz/"
+          telegramlink="https://t.me/+_A-d1T6L8a02NzU0"
+          instagramlink="https://www.instagram.com/takemyeyegit/"
           faInstagram="faInstagram"
           instagram="Instagram"
           telegram="Telegram"
