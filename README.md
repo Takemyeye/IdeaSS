@@ -2,7 +2,7 @@
 
 Belance is a web platform designed to simplify the process of ordering and creating websites. Clients can choose their preferred design and technologies, and select a person or team to work on their project. Belance is built with React.js, SCSS, and features an integrated REST API from Discord for communication and management.
 
-#Features
+__Features__
 
 Project Ordering: Clients can order a website by selecting their preferred design and technologies.
 
@@ -15,16 +15,16 @@ Customizable: Allows clients to pick designs and technologies that suit their pr
 Tech Stack
 
 
-Frontend: React.js
+__Frontend__: React.js
 
-Styling: SCSS
+__Styling__: SCSS
 
-Backend: REST API integration with Discord
+__Backend__: REST API integration with Discord, Express
 
 
 **Getting Started**
 
-Prerequisites
+__Prerequisites__
 
 Before you begin, ensure you have met the following requirements:
 
