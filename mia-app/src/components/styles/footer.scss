@@ -1,0 +1,47 @@
+@import '../../main.scss';
+
+footer {
+  @include font-text;
+  @include flex;
+  border-top: 1px solid rgba(255, 255, 255, 0.164);
+  margin-top: 1rem;
+  min-height: 10vh;
+  width: 100%;
+    h2 {
+      font-weight: 500;
+    }
+}
+
+.footer-block {
+  width: 90%;
+  height: 100%;
+  @include flex (row, space-between , center);
+}
+
+.footerContainer {
+  @include flex (row);
+  gap: 1rem;
+
+     a {
+      color: var(--color-001);
+      text-decoration: none;
+      width: auto;
+      height: auto;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+    
+    h3:hover {
+      color: var(--color-001);
+    }
+}
+
+@media all and ( max-width: 768px ) {
+  .footerContainer {
+    flex-direction: column;
+    align-items: start;
+    padding: 1rem 0;
+  }
+}

@@ -4,6 +4,7 @@ import Header from "../../Header";
 import LeftPanel from "./abaut-component/leftPanel";
 import RightPanel from "./abaut-component/rightPanel";
 import Information from "./abaut-component/information";
+import Footer from "../footer";
 
 const About = () => {
 
@@ -17,6 +18,7 @@ const About = () => {
         </div>
         <Information/>
       </div>
+      <Footer/>
     </>
   )
 }

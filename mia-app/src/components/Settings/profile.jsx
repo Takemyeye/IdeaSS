@@ -4,6 +4,7 @@ import Header from "../Header";
 import ProfileData from "./profileData";
 import NotificationBlock from "./notificationBlock";
 import Coment from "./coment";
+import Footer from "../component/footer";
 
 const video = "video/profile-video.mp4";
 
@@ -28,6 +29,7 @@ export function Profile() {
         <NotificationBlock/>
         <Coment/>
       </div>
+      <Footer/>
     </>
   );
 }

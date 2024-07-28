@@ -1,14 +1,15 @@
+import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
+import ActiveContext, { ActiveProvider } from './components/ActiveContext';
 import React, { useContext } from 'react';
-import './App.scss';
+import { Register } from './private/register';
+import { Profile } from './components/Settings/profile';
 import NotFound from './components/404';
 import Landing from './components/LandingPage';
 import Home from './components/Home';
 import About from './components/component/pages/About';
 import Works from './components/component/pages/Works';
-import { Profile } from './components/Settings/profile';
-import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
-import ActiveContext, { ActiveProvider } from './components/ActiveContext';
-import { Register } from './private/register';
+import Maket from './components/component/maket';
+import './App.scss';
 
 const ProtectedRoute = ({ element: Element }) => {
   const { user } = useContext(ActiveContext);
@@ -27,6 +28,7 @@ function App() {
           <Route exact path='/about' element={<ProtectedRoute element={About} />} />
           <Route exact path='/works' element={<ProtectedRoute element={Works} />} />
           <Route exact path='/profile' element={<ProtectedRoute element={Profile} />} />
+          <Route exact path='/maket' element={<Maket />} />
         </Routes>
       </ActiveProvider>
     </Router>

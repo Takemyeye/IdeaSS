@@ -113,7 +113,7 @@
 
 .description-container {
   @include flex (row);
-  @include size (100%, 300px, 26px);
+  @include size (100%, 380px, 26px);
   position: relative;
   animation: bottom 2s ease-in-out forwards;
 }
@@ -256,7 +256,7 @@
 }
 
 .works-scroll-background {
-  @include size (100%, 300px);
+  @include size (100%, 380px);
   position: relative;
   border-radius: 80px 20px 20px 20px;
   overflow: hidden;
