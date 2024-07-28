@@ -26,7 +26,7 @@ export function LandingUnit () {
           <div className="video-overlay video-overlay--top"></div>
         </div>
         <div className="landing-start">
-          <div className="text"> Belance </div>
+          <h1>Belance</h1>       
           <div className="landing-text"> {translation.innovatingSuccess} </div>
           <div className="start" onClick={handleStartClick}> {translation.getStarted} </div>
         </div>

@@ -1,0 +1,22 @@
+@import '../../main.scss';
+
+.maket {
+    @include size (100%, auto, 2rem);
+    @include font-text;
+    @include flex;
+}
+
+.text {
+    @include size (55%, auto, 8px);
+    @include flex;
+    text-align: center;
+}
+
+.maketContainer {
+    @include size (90%, auto, 2rem);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, auto);
+    position: relative;
+    animation: bottom 2s forwards;
+}

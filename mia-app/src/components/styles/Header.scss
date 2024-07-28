@@ -2,8 +2,8 @@
 
 header {
   @include flex (row, space-between);
-  @include font-text;
   @include size (100%, 10vh);
+  @include font-text;
   background-color: black;
   font-weight: bold;
   font-size: 15px;
