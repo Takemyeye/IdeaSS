@@ -30,7 +30,7 @@ const NotFound = () => {
           <div class="video-overlay video-overlay--top"></div>
         </div>
         <div className="landing-start">
-          <div className="text"> 404 | Page Not Found </div>
+          <h1> 404 | Page Not Found </h1>
           <div className="landing-text"> {landingText[0]} </div>
           <div className="start" onClick={handleStartClick}> Go Home </div>
         </div>

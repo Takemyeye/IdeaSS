@@ -39,10 +39,7 @@ const Developers = () => {
   }, []);
 
   const developersData = [
-    { name: 'Davide Pelucchini', experience: 'Ex: 1 month', level: '5', portfolioLink: '' },
-    { name: 'Leandro Fonti', experience: 'Ex: 1 month', level: '5', portfolioLink: '' },
     { name: 'Oleh Bratok', experience: 'Ex: 1 year', level: '5', portfolioLink: 'https://soulswap-portfolio.netlify.app/' },
-    { name: 'Mark Herasymchuk', experience: 'Ex: 3 years', level: '5', portfolioLink: 'https://mireg-v.github.io/Web-Resume/' },
   ];
 
   developersData.sort((a, b) => parseInt(b.level) - parseInt(a.level));
@@ -100,7 +97,7 @@ const Developers = () => {
           {developersData.map((developer, index) => (
             <div className="developer" key={index}>
               <div className="avatar"> <FontAwesomeIcon icon={faUser} /> </div>
-              <div className="name"> {developer.name} </div>
+              <h2> {developer.name} </h2>
               <div className="workExperience"> {developer.experience} </div>
               <Link to={developer.portfolioLink} className="works">
                 {translation.portfolio} <FontAwesomeIcon icon={faCode} />
@@ -109,6 +106,9 @@ const Developers = () => {
             </div>
           ))}
         </div>
+        <Link to="/developers">
+          <div className="more">{translation.moreButtonText}</div> 
+        </Link>
       </div>
     </div>
   );
