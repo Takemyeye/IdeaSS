@@ -1,9 +1,10 @@
 @import '../../main.scss';
 
 .maket {
-    @include size (100%, auto, 2rem);
+    @include size (100%, auto, 2.5rem);
     @include font-text;
     @include flex;
+    min-height: calc(80vh - 17px);
 }
 
 .text {
@@ -12,11 +13,25 @@
     text-align: center;
 }
 
-.maketContainer {
+.designContainer {
     @include size (90%, auto, 2rem);
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, auto);
     position: relative;
     animation: bottom 2s forwards;
+}
+
+@media all and (max-width: 1024px ) {
+    .designContainer {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(auto, auto);
+    }
+}
+
+@media all and (max-width: 510px ) {
+    .designContainer {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(auto, auto);
+    }
 }

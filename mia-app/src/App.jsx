@@ -28,7 +28,7 @@ function App() {
           <Route exact path='/about' element={<ProtectedRoute element={About} />} />
           <Route exact path='/works' element={<ProtectedRoute element={Works} />} />
           <Route exact path='/profile' element={<ProtectedRoute element={Profile} />} />
-          <Route exact path='/maket' element={<Maket />} />
+          <Route exact path='/maket' element={<ProtectedRoute element={Maket} />} />
         </Routes>
       </ActiveProvider>
     </Router>

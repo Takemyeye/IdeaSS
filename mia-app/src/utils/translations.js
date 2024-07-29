@@ -94,6 +94,13 @@ const translations = {
     review: 'Review',
     shareThoughts: 'Share your thoughts about our platform',
     submitReview: 'Submit Review',
+//Maket
+    templates: "Our Templates",
+    readyToUseTemplates: "Templates Ready to Use",
+    someTemplates: "Some templates are created using React.js, HTML, CSS, SCSS, Less, and TypeScript. We offer a variety of templates to meet your unique needs and preferences. Our templates are suitable for various projects - from simple web pages to complex web applications. Templates on React.js provide dynamism and responsiveness, ideal for modern web applications.",
+    traditionalTemplates: "Traditional templates created with HTML and CSS are easy to use and adapt, suitable for most web projects. SCSS and Less allow for more organized and maintainable styles, which is especially useful for large projects.",
+    landingPageReact: "This landing page is created using React.js and CSS. The project is of initial complexity level and demonstrates how easy it is to create a modern and responsive interface.",
+
   },
   ru: {
     innovatingSuccess: 'Инновации для вашего успеха: Belance формирует будущее вашего бизнеса с помощью первоклассных веб-приложений и креативных решений.',
@@ -195,6 +202,12 @@ const translations = {
     review: 'Отзыв',
     shareThoughts: 'Поделитесь своими мыслями о нашей платформе',
     submitReview: 'Отправить отзыв',
+    templates: "Наши макеты",
+    readyToUseTemplates: "Макеты, готовые к использованию",
+    someTemplates: "Некоторые макеты созданы с использованием React.js, HTML, CSS, SCSS, Less и TypeScript. Мы предлагаем разнообразные макеты, чтобы удовлетворить ваши уникальные потребности и предпочтения. Наши макеты подходят для различных проектов - от простых веб-страниц до сложных веб-приложений. Макеты на React.js обеспечивают динамичность и отзывчивость, что идеально подходит для современных веб-приложений.",
+    traditionalTemplates: "Традиционные макеты, созданные с использованием HTML и CSS, легки в использовании и адаптации, подходящие для большинства веб-проектов. SCSS и Less позволяют создавать более организованные и поддерживаемые стили, что особенно полезно для крупных проектов.",
+    landingPageReact: "Этот лендинг-пейдж создан с использованием React.js и CSS. Проект имеет начальный уровень сложности и демонстрирует, как легко можно создать современный и отзывчивый интерфейс.",
+
   },
   it: {
     innovatingSuccess: 'Innovare il tuo successo: Belance plasma il futuro della tua azienda con applicazioni web di alto livello e soluzioni creative.',
@@ -296,6 +309,12 @@ const translations = {
     review: 'Recensione',
     shareThoughts: 'Condividi i tuoi pensieri sulla nostra piattaforma',
     submitReview: 'Invia la recensione',
+    templates: "I nostri modelli",
+    readyToUseTemplates: "Modelli pronti all'uso",
+    someTemplates: "Alcuni modelli sono creati utilizzando React.js, HTML, CSS, SCSS, Less e TypeScript. Offriamo una varietà di modelli per soddisfare le tue esigenze e preferenze uniche. I nostri modelli sono adatti a vari progetti - dalle semplici pagine web alle complesse applicazioni web. I modelli su React.js offrono dinamismo e reattività, ideali per le moderne applicazioni web.",
+    traditionalTemplates: "I modelli tradizionali creati con HTML e CSS sono facili da usare e adattare, adatti alla maggior parte dei progetti web. SCSS e Less consentono di creare stili più organizzati e mantenibili, particolarmente utili per grandi progetti.",
+    landingPageReact: "Questa landing page è stata creata utilizzando React.js e CSS. Il progetto ha un livello di complessità iniziale e dimostra quanto sia facile creare un'interfaccia moderna e reattiva.",
+
   },
   uk: {
     innovatingSuccess: 'Інновації для вашого успіху: Belance формує майбутнє вашого бізнесу завдяки високоякісним веб-додаткам і креативним рішенням.',
@@ -397,6 +416,12 @@ const translations = {
     review: 'Відгук',
     shareThoughts: 'Поділіться своїми думками про нашу платформу',
     submitReview: 'Надіслати відгук',
+    templates: "Наші макети",
+    readyToUseTemplates: "Макети, готові до використання",
+    someTemplates: "Деякі макети створені з використанням React.js, HTML, CSS, SCSS, Less і TypeScript. Ми пропонуємо різноманітні макети, щоб задовольнити ваші унікальні потреби та вподобання. Наші макети підходять для різних проектів - від простих веб-сторінок до складних веб-додатків. Макети на React.js забезпечують динамічність і відгукливість, що ідеально підходить для сучасних веб-додатків.",
+    traditionalTemplates: "Традиційні макети, створені з використанням HTML і CSS, легкі у використанні та адаптації, підходять для більшості веб-проектів. SCSS і Less дозволяють створювати більш організовані та підтримувані стилі, що особливо корисно для великих проектів.",
+    landingPageReact: "Ця лендінгова сторінка створена з використанням React.js і CSS. Проект має початковий рівень складності та демонструє, як легко створити сучасний та адаптивний інтерфейс.",
+
   },
   pl: {
     innovatingSuccess: 'Innowacje dla Twojego sukcesu: Belance kształtuje przyszłość Twojego biznesu dzięki aplikacjom webowym najwyższej jakości i kreatywnym rozwiązaniom.',
@@ -498,6 +523,12 @@ const translations = {
     review: 'Recenzja',
     shareThoughts: 'Podziel się swoimi myślami o naszej platformie',
     submitReview: 'Prześlij recenzję',
+    templates: "Nasze Szablony",
+    readyToUseTemplates: "Szablony gotowe do użycia",
+    someTemplates: "Niektóre szablony zostały stworzone przy użyciu React.js, HTML, CSS, SCSS, Less i TypeScript. Oferujemy różnorodne szablony, aby spełnić Twoje unikalne potrzeby i preferencje. Nasze szablony nadają się do różnych projektów - od prostych stron internetowych po złożone aplikacje internetowe. Szablony na React.js zapewniają dynamikę i responsywność, idealne dla nowoczesnych aplikacji internetowych.",
+    traditionalTemplates: "Tradycyjne szablony stworzone przy użyciu HTML i CSS są łatwe w użyciu i adaptacji, odpowiednie dla większości projektów internetowych. SCSS i Less pozwalają na tworzenie bardziej zorganizowanych i łatwiejszych w utrzymaniu stylów, co jest szczególnie przydatne w dużych projektach.",
+    landingPageReact: "Ta strona docelowa została stworzona przy użyciu React.js i CSS. Projekt ma początkowy poziom złożoności i pokazuje, jak łatwo można stworzyć nowoczesny i responsywny interfejs.",
+
   }
 };
 

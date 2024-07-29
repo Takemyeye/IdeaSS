@@ -13,9 +13,8 @@ footer {
 }
 
 .footer-block {
-  width: 90%;
-  height: 100%;
   @include flex (row, space-between , center);
+  @include size (85%, 100%);
 }
 
 .footerContainer {
