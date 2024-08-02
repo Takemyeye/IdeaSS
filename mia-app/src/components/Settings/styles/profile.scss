@@ -14,8 +14,10 @@
   border-radius: 12px;
   padding: 2rem;
   background-color: rgba(0, 0, 0, 0.836);
-  box-shadow: 0 0 5px var(--color-000);
+  border: 1px solid rgba(255, 255, 255, 0.192);
+  animation: bottom 1s ease-in-out forwards;
   z-index: 2;
+
 
   .profile-title {
     @include flex (column, center, start);

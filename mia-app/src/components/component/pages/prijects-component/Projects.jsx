@@ -2,7 +2,7 @@ import React, { useMemo, useContext } from "react";
 import '../styles/projects.scss';
 import ActiveContext from "../../../ActiveContext";
 import translations from "../../../../utils/translations";
-import { ProjectUnit } from "./ProjectUnit";
+import { ProjectUnit } from "../../../../ui/ProjectUnit";
 
 const img = {
   ssPortfolio: 'img/SS-Portfolio.png',

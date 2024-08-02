@@ -1,5 +1,5 @@
 import React, { useMemo, useContext } from 'react';
-import { ProjectUnit } from "../pages/prijects-component/ProjectUnit"
+import { ProjectUnit } from "../../../ui/ProjectUnit"
 import ActiveContext from '../../ActiveContext';
 import translations from '../../../utils/translations';
 

@@ -1,0 +1,46 @@
+@import "../../../main.scss";
+
+.team {
+  @include size (100%, calc(90vh - 1rem), 2rem);
+  @include flex(column, start);
+  @include font-text;
+}
+
+.team-container {
+  @include size (90%, auto, 2rem);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+}
+
+.teamUnit {
+  @include size (70%, auto, 2rem);
+  @include flex (column, start);
+  padding: 2rem 1rem;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.192);
+  animation: drop 0.5s ease-in-out forwards;
+  transition: 0.2s ease-in-out;
+}
+
+.teamUnit:hover {
+  padding: 2.1rem 1.1rem;
+  border: 1px solid rgba(255, 255, 255, 0.438);
+}
+
+.containerTeam-top {
+  @include size (100%, auto, 1rem);
+  @include flex (row, start);
+}
+
+@media all and (max-width: 1024px) {
+  .team-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media all and (max-width: 768px) {
+  .team-container {
+    @include flex;
+  }
+}
