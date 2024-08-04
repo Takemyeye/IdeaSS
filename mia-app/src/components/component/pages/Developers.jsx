@@ -106,7 +106,7 @@ const Developers = () => {
             </div>
           ))}
         </div>
-        <Link to="/developers">
+        <Link to="/team">
           <div className="more">{translation.moreButtonText}</div> 
         </Link>
       </div>

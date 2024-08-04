@@ -3,7 +3,7 @@ import Header from "../Header";
 import Footer from "../component/footer";
 import Team from "./team";
 
-const Developers = () => {
+const TeamPage = () => {
     return (
         <>
             <Header/>
@@ -13,4 +13,4 @@ const Developers = () => {
     )
 }
 
-export default Developers;
+export default TeamPage;
