@@ -165,19 +165,6 @@ input:checked + .slider:before {
   cursor: not-allowed;  
 }
 
-.profile-video {
-  @include size (100%, 90vh);
-  position: fixed;
-  left: 0;
-  bottom: 0;
-    video {
-      @include size (100%, 100%);
-      object-fit: cover;
-      filter: blur(6px);
-      opacity: 0.3;
-    }
-}
-
 @media all and (max-width: 425px) {
 
   .profile-container {

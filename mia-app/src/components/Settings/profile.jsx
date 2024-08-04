@@ -6,25 +6,11 @@ import NotificationBlock from "./notificationBlock";
 import Coment from "./coment";
 import Footer from "../component/footer";
 
-const video = "video/profile-video.mp4";
-
 export function Profile() {
-
-
   return (
     <>
       <Header />
       <div className="wrapper">
-      <div className="profile-video">
-          <video 
-            src={video}
-            autoPlay
-            loop
-            muted
-            playsInline
-            preload="auto">
-          </video>
-        </div>
         <ProfileData/>
         <NotificationBlock/>
         <Coment/>
